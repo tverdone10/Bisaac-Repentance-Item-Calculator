@@ -4,7 +4,7 @@ import {
   TRANSFORMATIONS,
   TRANSFORMATION_THRESHOLD,
 } from "../data";
-import type { Character, Item } from "../types";
+import type { Character, Hearts, Item } from "../types";
 import {
   computeStats,
   emptyMods,
@@ -32,6 +32,40 @@ export interface Build {
    * Hearts lost): item page -> that quantity. Missing means 0.
    */
   scaled: Record<string, number>;
+  /**
+   * Manual health adjustment per heart kind, so you can spend containers on
+   * Devil deals or account for damage taken. Added on top of the computed
+   * starting + item total.
+   */
+  healthDelta: Partial<Record<keyof Hearts, number>>;
+}
+
+/** Character start + item grants + your manual adjustment. */
+export function buildHealth(build: Build, picked: Item[]): Hearts {
+  const form =
+    build.character.forms[build.formIndex] ?? build.character.forms[0];
+  const out: Hearts = { ...form.hearts };
+
+  // Eden's start is randomised; the wiki gives an image, not values.
+  const randomised = out.unknown === -1;
+  if (randomised) out.unknown = 0;
+
+  // Duplicates are disabled in the picker, so count each item once.
+  for (const item of new Map(picked.map((i) => [i.page, i])).values()) {
+    out.red += item.health.redContainers + item.health.emptyContainers;
+    out.soul += item.health.soulHearts;
+    out.black += item.health.blackHearts;
+    out.bone += item.health.boneHearts;
+    out.rotten += item.health.rottenHearts;
+    out.eternal += item.health.eternalHearts;
+    out.broken += item.health.brokenHearts;
+  }
+
+  for (const [kind, delta] of Object.entries(build.healthDelta)) {
+    const key = kind as keyof Hearts;
+    out[key] = Math.max(0, out[key] + (delta ?? 0));
+  }
+  return out;
 }
 
 export interface TransformationProgress {

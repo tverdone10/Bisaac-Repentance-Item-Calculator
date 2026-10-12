@@ -50,6 +50,24 @@ EXTRA_PAGES = {
         "Tainted Keeper", "Tainted Apollyon", "Tainted Forgotten",
         "Tainted Bethany", "Tainted Jacob",
     ],
+    # One page per item pool, listing its contents as {{pool items|...}}.
+    # The per-item infobox only names a pool for 45 of 720 items, so these
+    # pages are the real source.
+    "pools": [
+        f"{name} (Item Pool)" for name in [
+            "Treasure Room", "Shop", "Boss", "Devil Room", "Angel Room",
+            "Secret Room", "Ultra Secret Room", "Library", "Curse Room",
+            "Golden Chest", "Red Chest", "Wooden Chest", "Old Chest",
+            "Mom's Chest", "Planetarium", "Baby Shop", "Crane Game",
+            "Shell Game", "Beggar", "Devil Beggar", "Battery Bum",
+            "Bomb Bum", "Rotten Beggar", "Key Master",
+        ]
+    ] + [
+        f"{name} (Greed Mode Item Pool)" for name in [
+            "Treasure Room", "Shop", "Boss", "Devil Room", "Angel Room",
+            "Secret Room", "Library", "Curse Room", "Golden Chest",
+        ]
+    ],
     "mechanics": [
         "Attributes", "Damage", "Tears", "Speed", "Range", "Shot Speed",
         "Luck", "Tear delay", "Transformations", "Items", "Trinkets",

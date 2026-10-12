@@ -10,10 +10,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "urn",
-      "special shopkeeper"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -74,6 +71,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -92,9 +99,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "poop"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -162,6 +167,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -264,6 +279,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -337,6 +362,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -418,6 +453,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -496,6 +541,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -594,6 +649,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -667,6 +732,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -745,6 +820,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -836,6 +921,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -924,6 +1019,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -998,6 +1103,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -1077,6 +1192,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1155,6 +1280,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1228,6 +1363,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -1305,6 +1450,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -1386,6 +1541,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1459,6 +1624,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -1548,6 +1723,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1628,6 +1813,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1707,6 +1902,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -1804,6 +2009,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -1896,6 +2111,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -2006,6 +2231,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2114,6 +2349,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2213,6 +2458,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2286,6 +2541,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -2367,6 +2632,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2440,6 +2715,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -2520,6 +2805,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2594,6 +2889,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2612,9 +2917,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "mushroom"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -2675,6 +2978,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -2754,6 +3067,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2772,9 +3095,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "blood donation machine"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -2862,6 +3183,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -2935,6 +3266,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -3044,6 +3385,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3117,6 +3468,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -3192,6 +3553,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3210,7 +3581,10 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [],
+    "pools": [
+      "Treasure Room (Greed)",
+      "Treasure Room"
+    ],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -3265,6 +3639,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -3341,6 +3725,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -3458,6 +3852,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3571,6 +3975,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3654,6 +4068,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -3764,6 +4188,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3873,6 +4307,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -3946,6 +4390,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4026,6 +4480,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -4044,9 +4508,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "special shopkeeper"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -4118,6 +4580,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4211,6 +4683,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -4229,9 +4711,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "special shopkeeper"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -4300,6 +4780,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -4318,10 +4808,7 @@
     "quality": null,
     "tags": [],
     "recharge": null,
-    "pools": [
-      "golden poop",
-      "special shopkeeper"
-    ],
+    "pools": [],
     "devilPrice": null,
     "shopPrice": null,
     "effects": [
@@ -4377,6 +4864,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4470,6 +4967,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -4554,6 +5061,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -4629,6 +5146,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 1,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4707,6 +5234,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4794,6 +5331,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -4898,6 +5445,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -4985,6 +5542,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -5080,6 +5647,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5165,6 +5742,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5238,6 +5825,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -5323,6 +5920,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -5417,6 +6024,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5501,6 +6118,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -5594,6 +6221,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5674,6 +6311,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5749,6 +6396,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -5826,6 +6483,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -5902,6 +6569,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6017,6 +6694,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -6106,6 +6793,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6222,6 +6919,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -6295,6 +7002,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6370,6 +7087,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6472,6 +7199,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6580,6 +7317,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -6674,6 +7421,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -6770,6 +7527,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -6857,6 +7624,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -6933,6 +7710,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -7019,6 +7806,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -7100,6 +7897,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -7177,6 +7984,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -7268,6 +8085,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -7346,6 +8173,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -7443,6 +8280,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -7534,6 +8381,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -7618,6 +8475,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -7704,6 +8571,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -7801,6 +8678,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -7882,6 +8769,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -7962,6 +8859,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -8162,6 +9069,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -8238,6 +9155,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -8354,6 +9281,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -8513,6 +9450,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -8587,6 +9534,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -8667,6 +9624,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -8780,6 +9747,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -8873,6 +9850,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -8959,6 +9946,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9033,6 +10030,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9106,6 +10113,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9190,6 +10207,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9265,6 +10292,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9355,6 +10392,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9451,6 +10498,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9530,6 +10587,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9607,6 +10674,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9699,6 +10776,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9811,6 +10898,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -9884,6 +10981,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -9959,6 +11066,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10033,6 +11150,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10106,6 +11233,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -10197,6 +11334,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10287,6 +11434,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -10386,6 +11543,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10459,6 +11626,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -10584,6 +11761,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10674,6 +11861,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -10772,6 +11969,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10857,6 +12064,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -10932,6 +12149,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11012,6 +12239,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11085,6 +12322,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11164,6 +12411,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11237,6 +12494,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11316,6 +12583,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11389,6 +12666,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11490,6 +12777,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11586,6 +12883,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11667,6 +12974,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11768,6 +13085,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -11844,6 +13171,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -11988,6 +13325,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -12062,6 +13409,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -12164,6 +13521,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -12251,6 +13618,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -12324,6 +13701,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -12418,6 +13805,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -12534,6 +13931,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -12639,6 +14046,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -12747,6 +14164,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -12821,6 +14248,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -12913,6 +14350,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -13091,6 +14538,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -13179,6 +14636,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -13271,6 +14738,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -13352,6 +14829,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -13425,6 +14912,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -13518,6 +15015,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -13594,6 +15101,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -13681,6 +15198,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 1,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -13854,6 +15381,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -13960,6 +15497,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -14055,6 +15602,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -14138,6 +15695,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -14214,6 +15781,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -14313,6 +15890,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [
@@ -14394,6 +15981,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -14481,6 +16078,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -14663,6 +16270,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -14852,6 +16469,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -14948,6 +16575,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -15026,6 +16663,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15111,6 +16758,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -15182,6 +16839,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15266,6 +16933,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15354,6 +17031,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -15434,6 +17121,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -15511,6 +17208,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15590,6 +17297,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15683,6 +17400,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -15765,6 +17492,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15854,6 +17591,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -15947,6 +17694,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -16370,6 +18127,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -16446,6 +18213,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -16521,6 +18298,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -16698,6 +18485,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -16802,6 +18599,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -16916,6 +18723,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -16994,6 +18811,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -17092,6 +18919,16 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
+    },
     "variants": [],
     "scaled": null,
     "conditionalEffects": [],
@@ -17172,6 +19009,16 @@
       "speedMultipliers": [],
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
+    },
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,
@@ -17278,81 +19125,15 @@
       "rangeMultipliers": [],
       "shotSpeedMultipliers": []
     },
-    "variants": [],
-    "scaled": null,
-    "conditionalEffects": [],
-    "hasStats": false,
-    "needsReview": [],
-    "overrideReason": null
-  },
-  {
-    "id": 474,
-    "name": "Tonsil",
-    "page": "Tonsil",
-    "sprite": "sprites/trinkets/tonsil.png",
-    "kind": "trinket",
-    "quote": "Gross...",
-    "description": "Grants a familiar that follows Isaac and blocks enemy shots.",
-    "quality": null,
-    "tags": [],
-    "recharge": null,
-    "pools": [],
-    "devilPrice": null,
-    "shopPrice": null,
-    "effects": [
-      "After taking 12-20 / 6-12 hits a removed tonsil familiar starts following Isaac, blocking enemy shots.",
-      "The effect can happen twice, after which the trinket will be destroyed.",
-      "The familiar does not deal damage to enemies."
-    ],
-    "synergies": [
-      {
-        "group": null,
-        "text": "/ Mom's Box: Having either can generate a 3rd tonsil before destroying the trinket. Having both can generate a 4th tonsil before destroying it."
-      }
-    ],
-    "interactions": [],
-    "mods": {
-      "damageUps": 0.0,
-      "damageUpMultipliers": [],
-      "flatDamage": 0.0,
-      "damageMultipliers": [],
-      "nonStackingMultipliers": [],
-      "tears": 0.0,
-      "tearDelay": 0.0,
-      "fireRateAdd": 0.0,
-      "fireRateMultipliers": [],
-      "tearDelayMultipliers": [],
-      "shotMultipliers": [],
-      "speed": 0.0,
-      "range": 0.0,
-      "shotSpeed": 0.0,
-      "luck": 0.0,
-      "speedMultipliers": [],
-      "rangeMultipliers": [],
-      "shotSpeedMultipliers": []
-    },
-    "replacesTears": false,
-    "dpsNote": null,
-    "stacking": "full",
-    "repeatMods": {
-      "damageUps": 0.0,
-      "damageUpMultipliers": [],
-      "flatDamage": 0.0,
-      "damageMultipliers": [],
-      "nonStackingMultipliers": [],
-      "tears": 0.0,
-      "tearDelay": 0.0,
-      "fireRateAdd": 0.0,
-      "fireRateMultipliers": [],
-      "tearDelayMultipliers": [],
-      "shotMultipliers": [],
-      "speed": 0.0,
-      "range": 0.0,
-      "shotSpeed": 0.0,
-      "luck": 0.0,
-      "speedMultipliers": [],
-      "rangeMultipliers": [],
-      "shotSpeedMultipliers": []
+    "health": {
+      "redContainers": 0,
+      "emptyContainers": 0,
+      "soulHearts": 0,
+      "blackHearts": 0,
+      "boneHearts": 0,
+      "rottenHearts": 0,
+      "eternalHearts": 0,
+      "brokenHearts": 0
     },
     "variants": [],
     "scaled": null,

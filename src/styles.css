@@ -1166,3 +1166,117 @@ button {
 .hud-count {
   color: var(--line);
 }
+
+/* ------------------------------------------------------------ health panel */
+
+.health h3 {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.health-reset {
+  font-size: 9px;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--text-faint);
+}
+
+.health-reset:hover {
+  color: var(--down);
+}
+
+.heart-rows {
+  display: grid;
+  gap: 1px;
+}
+
+.heart-row {
+  display: grid;
+  grid-template-columns: 10px 1fr auto auto;
+  align-items: center;
+  gap: 6px;
+  padding: 3px 7px;
+  background: var(--bg-cell);
+}
+
+/* Heart kinds read by colour, matching the game's palette closely enough
+   to be recognisable at a glance. */
+.heart-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.heart-dot.is-red     { background: #c43b3b; }
+.heart-dot.is-soul    { background: #8fa8d8; }
+.heart-dot.is-black   { background: #4a4458; }
+.heart-dot.is-bone    { background: #d8d2c0; }
+.heart-dot.is-coin    { background: #d2a24c; }
+.heart-dot.is-broken  { background: #6b5e50; }
+
+.heart-label {
+  font-size: 10px;
+  color: var(--text-dim);
+}
+
+.heart-count {
+  font-family: var(--mono);
+  font-size: 13px;
+  min-width: 16px;
+  text-align: right;
+}
+
+.heart-ctl {
+  display: flex;
+  gap: 2px;
+}
+
+.heart-ctl button {
+  width: 17px;
+  height: 17px;
+  display: grid;
+  place-items: center;
+  font-size: 12px;
+  line-height: 1;
+  color: var(--text-faint);
+  background: var(--bg);
+  border: 1px solid var(--line-soft);
+  border-radius: 2px;
+}
+
+.heart-ctl button:hover {
+  color: var(--text);
+  border-color: var(--blood);
+}
+
+/* --------------------------------------------------------- filter axes */
+
+/* A visual break between the "how you hold it" axis and the independent
+   stat / pool filters. */
+.filter-sep {
+  width: 1px;
+  align-self: stretch;
+  margin: 0 2px;
+  background: var(--line);
+}
+
+.pool-select {
+  padding: 3px 7px;
+  font: inherit;
+  font-size: 10px;
+  color: var(--text-dim);
+  background: var(--bg-cell);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+}
+
+.pool-select:focus {
+  outline: none;
+  border-color: var(--blood);
+}

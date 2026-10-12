@@ -3,6 +3,7 @@
 import { describe, expect, it } from "vitest";
 import { characters, items } from "../data";
 import {
+  buildHealth,
   buildInteractions,
   buildMods,
   buildStats,
@@ -36,6 +37,7 @@ const buildFor = (name: string, itemNames: string[]): [Build, Item[]] => {
       picked: picked.map((i) => i.page),
       variants: {},
       scaled: {},
+      healthDelta: {},
     },
     picked,
   ];
@@ -68,8 +70,42 @@ describe("dataset shape", () => {
   });
 
   it("has every collectible and trinket", () => {
-    expect(items.filter((i) => i.kind !== "trinket")).toHaveLength(720);
-    expect(items.filter((i) => i.kind === "trinket")).toHaveLength(188);
+    expect(items.filter((i) => i.kind !== "trinket")).toHaveLength(719);
+    expect(items.filter((i) => i.kind === "trinket")).toHaveLength(187);
+  });
+
+  it("gives every entry a unique page", () => {
+    // Regression: Tonsil sat in both Category:Collectibles and
+    // Category:Trinkets, so it was parsed twice. Two records sharing a page
+    // share a React key, and the duplicate then showed up in every search
+    // result regardless of the query.
+    const pages = items.map((i) => i.page);
+    expect(new Set(pages).size).toBe(pages.length);
+  });
+
+  it("excludes items that do not exist in Repentance+", () => {
+    // Tonsil is in Category:Removed in Repentance.
+    expect(items.find((i) => i.name === "Tonsil")).toBeUndefined();
+  });
+
+  it("assigns pools from the pool pages, not the sparse infobox field", () => {
+    // The infobox names a pool for only 45 of 720 items; the per-pool pages
+    // cover 700.
+    expect(items.filter((i) => i.pools.length > 0).length).toBeGreaterThan(690);
+    expect(byName("Brimstone").pools).toContain("Devil Room");
+    expect(byName("Sacred Heart").pools).toContain("Angel Room");
+    expect(byName("The Sad Onion").pools).toContain("Treasure Room");
+  });
+
+  it("reads health grants without double-counting restatements", () => {
+    // Sacred Heart says both "Adds a Red Heart Container" and "Grants one
+    // Red Heart Container"; summing them gave it two.
+    expect(byName("Sacred Heart").health.redContainers).toBe(1);
+    expect(byName("Magic Mushroom").health.redContainers).toBe(1);
+    expect(byName("Rosary").health.soulHearts).toBe(3);
+    expect(byName("The Pact").health.soulHearts).toBe(2);
+    expect(byName("The Pact").health.blackHearts).toBe(2);
+    expect(byName("Marrow").health.boneHearts).toBe(1);
   });
 
   it("has a sprite for every entry", () => {
@@ -180,6 +216,7 @@ describe("known builds", () => {
         picked: [item.page],
         variants: {},
         scaled: {},
+      healthDelta: {},
       };
       const s = buildStats(build, [item]);
       for (const [key, value] of Object.entries(s)) {
@@ -447,6 +484,7 @@ describe("duplicate pickups", () => {
         picked: picked.map((i) => i.page),
         variants: {},
         scaled: {},
+      healthDelta: {},
       };
       const s = buildStats(build, picked);
       for (const [k, v] of Object.entries(s)) {
@@ -473,6 +511,7 @@ describe("variants and scaled effects", () => {
       picked: [purity.page],
       variants: { [purity.page]: idx },
       scaled: {},
+      healthDelta: {},
     });
     const red = buildStats(mk(0), [purity]);
     const orange = buildStats(mk(3), [purity]);
@@ -492,6 +531,7 @@ describe("variants and scaled effects", () => {
       picked: [purity.page],
       variants: {},
       scaled: {},
+      healthDelta: {},
     };
     expect(buildStats(b, [purity]).damage).toBeGreaterThan(3.5);
   });
@@ -508,6 +548,7 @@ describe("variants and scaled effects", () => {
         picked: [mp.page],
         variants: {},
         scaled: { [mp.page]: coins },
+      healthDelta: {},
       };
       return buildMods([mp], { scaled: b.scaled }).damageUps;
     };
@@ -535,6 +576,46 @@ describe("variants and scaled effects", () => {
       (1 - 0.4) * 0.9,
       6,
     );
+  });
+});
+
+describe("health", () => {
+  const mk = (name: string, itemNames: string[]): [Build, Item[]] =>
+    buildFor(name, itemNames);
+
+  it("starts each character at their documented hearts", () => {
+    expect(buildHealth(...mk("Isaac", [])).red).toBe(3);
+    expect(buildHealth(...mk("Magdalene", [])).red).toBe(4);
+    expect(buildHealth(...mk("???", [])).soul).toBe(3);
+    expect(buildHealth(...mk("Azazel", [])).black).toBe(3);
+    expect(buildHealth(...mk("Keeper", [])).coin).toBe(2);
+  });
+
+  it("adds containers and hearts from items", () => {
+    const h = buildHealth(...mk("Isaac", ["Magic Mushroom", "Rosary"]));
+    expect(h.red).toBe(4); // 3 base + 1 container
+    expect(h.soul).toBe(3); // Rosary
+  });
+
+  it("lets you spend health, e.g. on a Devil deal", () => {
+    const [build, picked] = mk("Isaac", []);
+    const spent = buildHealth(
+      { ...build, healthDelta: { red: -1 } },
+      picked,
+    );
+    expect(spent.red).toBe(2);
+  });
+
+  it("never goes negative", () => {
+    const [build, picked] = mk("Isaac", []);
+    const h = buildHealth({ ...build, healthDelta: { red: -99 } }, picked);
+    expect(h.red).toBe(0);
+  });
+
+  it("zeroes Eden's randomised sentinel rather than leaking -1", () => {
+    const h = buildHealth(...mk("Eden", []));
+    expect(h.unknown).toBe(0);
+    for (const v of Object.values(h)) expect(v).toBeGreaterThanOrEqual(0);
   });
 });
 

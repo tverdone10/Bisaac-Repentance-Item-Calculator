@@ -12,7 +12,7 @@ all 34 Repentance+ characters, all six stats, and the full item pool.
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm test           # 90 tests
+npm test           # 99 tests
 npm run validate   # cross-check stats against independent wiki pages
 npm run build
 ```
@@ -81,6 +81,27 @@ prevents picking an item twice. The three sourced `stacking` rules remain in
 the data for when an "allow duplicates" toggle is added. Note the trade-off:
 duplicates are reachable in game via Diplopia, Crooked Penny, Damocles and
 Glitched Crown, and those builds currently can't be modelled.
+
+**Item pools come from the pool pages, not the infobox.** The per-item
+infobox names a pool for only 45 of 720 items; the 33 `* (Item Pool)` pages
+list their contents as `{{pool items|...}}` and cover 700. Two wikitext traps
+there: the template takes a named `dlc=` parameter that a naive comma split
+swallows into the first item name, and `Money = Power` contains an equals
+sign, which MediaWiki reads as a named parameter.
+
+**Category membership is not a classifier.** `Tonsil` sat in both
+Category:Collectibles and Category:Trinkets, so it was parsed twice. Two
+records sharing a page also share a React key, and the duplicate appeared in
+every search result regardless of the query. Pages are now classified by
+their own infobox. Tonsil is also in Category:Removed in Repentance, so it is
+excluded outright -- it does not exist in Repentance+.
+
+**Health is structured.** Character starting hearts parse out of
+`{{hearts|red=3}}` into per-kind counts, and 66 items grant containers or
+hearts on pickup. Health grants take the **largest** claim per kind rather
+than summing: the description and the effects bullet usually restate the same
+grant in different words, and Sacred Heart ("Adds a Red Heart Container" /
+"Grants one Red Heart Container") was getting two.
 
 **The wiki's character `id` is not a character id.** Isaac's infobox reads
 `id = 14`, and Cain and Magdalene both read `2` -- it is an internal file

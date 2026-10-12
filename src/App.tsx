@@ -15,6 +15,7 @@ export default function App() {
       picked: [],
       variants: {},
       scaled: {},
+      healthDelta: {},
     });
 
   if (!build) {

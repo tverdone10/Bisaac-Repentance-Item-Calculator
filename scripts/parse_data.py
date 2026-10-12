@@ -42,6 +42,12 @@ NON_ITEM_PAGES = {
     "Unlocking Super Meat Boy & Super Bandage Girl", "Golden Trinket",
 }
 
+# Listed by the wiki but absent from Repentance+. Verified against
+# Category:Removed in Repentance -- Tonsil is the only item in it.
+REMOVED_IN_TARGET = {
+    "Tonsil": "removed in Repentance; absent from Repentance+",
+}
+
 # Repentance+ defaults, used when a character infobox omits the field.
 DEFAULT_BASE = {
     "damage": 3.5,
@@ -410,6 +416,171 @@ def grouped_bullets(body: str) -> list[dict]:
                 "text": txt,
                 "depth": len(s) - len(s.lstrip("*")),
             })
+    return out
+
+
+# ------------------------------------------------------------- item pools
+
+
+def parse_pool_page(text: str) -> list[str]:
+    """Item names from a pool page's {{pool items|...}} blocks.
+
+    Two wikitext traps here:
+      * the template takes a named `dlc=` parameter, so a naive comma split
+        swallows it into the first item name; and
+      * "Money = Power" contains an equals sign, which MediaWiki reads as a
+        named parameter (`Money` with value `Power`). Splitting on top-level
+        pipes first, then handling that one name, keeps both intact.
+    """
+    names: list[str] = []
+    for _, _, args in find_templates(text, "pool items"):
+        for arg in args[1:]:
+            arg = arg.strip()
+            if not arg:
+                continue
+            # `dlc = a` and friends are their own pipe-separated argument;
+            # the items follow in the next one. Skip the metadata outright --
+            # using its value appended bare DLC codes as item names.
+            m = re.match(r"^([a-z ]+)\s*=\s*(.*)$", arg, re.S)
+            if m and m.group(1).strip() in ("dlc", "note", "title"):
+                continue
+            for raw in arg.split(","):
+                name = re.sub(r"\{\{[^}]*\}\}", "", raw).strip()
+                # Restore the one item whose name contains "=".
+                if re.fullmatch(r"Money\s*=?\s*Power", name, re.I):
+                    name = "Money = Power"
+                if name and not re.fullmatch(r"[a-z ]+=.*", name):
+                    names.append(name)
+    return names
+
+
+def load_pools() -> dict[str, list[str]]:
+    """item name -> pool labels, from the per-pool wiki pages."""
+    idx_path = RAW / "pools" / "_index.json"
+    if not idx_path.exists():
+        return {}
+    idx = json.loads(io.open(idx_path, encoding="utf-8").read())
+    out: dict[str, list[str]] = {}
+    for title, fname in idx.items():
+        label = (title.replace(" (Greed Mode Item Pool)", " (Greed)")
+                      .replace(" (Item Pool)", ""))
+        text = io.open(RAW / "pools" / fname, encoding="utf-8").read()
+        for name in parse_pool_page(text):
+            out.setdefault(name, [])
+            if label not in out[name]:
+                out[name].append(label)
+    return out
+
+
+POOLS = load_pools()
+POOLS_MATCHED: set[str] = set()
+
+
+def pools_for(name: str) -> list[str]:
+    found = POOLS.get(name, [])
+    if found:
+        POOLS_MATCHED.add(name)
+    return found
+
+
+WORD_NUM = {"a": 1, "an": 1, "one": 1, "two": 2, "three": 3, "four": 4,
+            "five": 5, "six": 6}
+
+# "Adds one Red Heart Container", "Grants 3 Soul Hearts", ...
+HEALTH_GRANT_RE = re.compile(
+    r"(?:grants?|gives?|adds?)\s+(?:isaac\s+)?"
+    r"(a|an|one|two|three|four|five|six|\d+)\s+"
+    r"(?:full\s+)?"
+    r"(red heart container|heart container|empty heart container|"
+    r"soul hearts?|black hearts?|bone hearts?|rotten hearts?|"
+    r"eternal hearts?|broken hearts?)",
+    re.I,
+)
+
+HEALTH_FIELD = {
+    "red heart container": "redContainers",
+    "heart container": "redContainers",
+    "empty heart container": "emptyContainers",
+    "soul heart": "soulHearts",
+    "black heart": "blackHearts",
+    "bone heart": "boneHearts",
+    "rotten heart": "rottenHearts",
+    "eternal heart": "eternalHearts",
+    "broken heart": "brokenHearts",
+}
+
+HEALTH_CHANNELS = ("redContainers", "emptyContainers", "soulHearts",
+                   "blackHearts", "boneHearts", "rottenHearts",
+                   "eternalHearts", "brokenHearts")
+
+
+def extract_health(lines: list[dict], description: str) -> dict:
+    """Health an item grants on pickup.
+
+    Conditional lines are skipped for the same reason stat extraction skips
+    them: "grants a Soul Heart on每 room clear" is not a pickup bonus. Each
+    distinct phrasing counts once -- the description usually restates the
+    effects bullet, and summing both would double every container.
+    """
+    out = {k: 0 for k in HEALTH_CHANNELS}
+    for text in [description] + [l["text"] for l in lines]:
+        if not text or CONDITION_RE.search(text):
+            continue
+        for m in HEALTH_GRANT_RE.finditer(text):
+            qty_raw, kind = m.group(1).lower(), m.group(2).lower().rstrip("s")
+            if kind.endswith("container") is False and kind not in HEALTH_FIELD:
+                kind = kind + "s" if kind + "s" in HEALTH_FIELD else kind
+            field = HEALTH_FIELD.get(kind)
+            if not field:
+                continue
+            qty = WORD_NUM.get(qty_raw) or (
+                int(qty_raw) if qty_raw.isdigit() else 0
+            )
+            # Take the largest claim per channel rather than summing. The
+            # description and the effects bullet almost always restate the
+            # same grant in different words -- Sacred Heart says both "Adds
+            # a Red Heart Container" and "Grants one Red Heart Container" --
+            # and summing those gave it two containers.
+            out[field] = max(out[field], qty)
+    return out
+
+
+# --------------------------------------------------------------- health
+
+HEART_KINDS = ("red", "soul", "black", "bone", "rotten", "eternal",
+               "coin", "broken", "unknown")
+
+
+def parse_health(raw: str) -> dict:
+    """{{hearts|red=3}} / {{heart|red}} / mixed forms -> container counts.
+
+    Returns counts per heart kind plus `unknown` for Eden's randomised
+    start, which the wiki renders as an image rather than values.
+    """
+    out = {k: 0 for k in HEART_KINDS}
+    if not raw:
+        return out
+    text = resolve_dlcalt(raw)
+
+    # Eden's health is an image, not values.
+    if re.search(r"\[\[file:", text, re.I):
+        out["unknown"] = -1  # sentinel: randomised
+        return out
+
+    # Only the base (non-unlockable) portion counts as the starting loadout.
+    text = re.split(r"\{\{unlockable\}\}", text)[0]
+
+    for _, _, args in find_templates(text, "hearts"):
+        for arg in args[1:]:
+            arg = arg.strip()
+            m = re.match(r"^([a-z]+)\s*=\s*(\d+)$", arg, re.I)
+            if m and m.group(1).lower() in out:
+                out[m.group(1).lower()] += int(m.group(2))
+            elif arg.lower() in out:          # positional, e.g. {{hearts|red|black=2}}
+                out[arg.lower()] += 1
+    for _, _, args in find_templates(text, "heart"):
+        if len(args) > 1 and args[1].strip().lower() in out:
+            out[args[1].strip().lower()] += 1
     return out
 
 
@@ -1043,6 +1214,7 @@ def parse_form(box, suffix):
     return {
         "base": base,
         "health": clean(box.get("health" + suffix, "")),
+        "hearts": parse_health(box.get("health" + suffix, "")),
         "variableStats": bool(SPREAD_RE.search(spread)),
     }
 
@@ -1090,6 +1262,7 @@ def parse_character(title, text):
         # Primary form promoted for convenience; forms[] is the full truth.
         "base": forms[0]["base"],
         "health": forms[0]["health"],
+        "hearts": forms[0]["hearts"],
         "forms": forms,
         "dual": len(forms) > 1,
         "startingItems": [
@@ -1177,11 +1350,9 @@ def parse_item(title: str, text: str, kind: str) -> dict | None:
             t for t in re.split(r"\s+", clean(box.get("tags", ""))) if t
         ],
         "recharge": clean(box.get("recharge", "")) or None,
-        "pools": [
-            c for c in (
-                clean(s) for s in re.split(r"<br\s*/?>|,", box.get("pool", ""))
-            ) if c
-        ],
+        # From the per-pool pages, not the infobox: the infobox names a pool
+        # for only 45 of 720 items.
+        "pools": pools_for(item_name),
         "devilPrice": clean(box.get("devil price", "")) or None,
         "shopPrice": clean(box.get("shop price", "")) or None,
         "effects": [b["text"] for b in effect_lines],
@@ -1203,6 +1374,7 @@ def parse_item(title: str, text: str, kind: str) -> dict | None:
         "dpsNote": note_dps(item_name),
         "stacking": stack_rule,
         "repeatMods": repeat,
+        "health": extract_health(effect_lines, clean(box.get("description", ""))),
         "variants": variants_for(item_name, mods),
         "scaled": scaled_for(item_name, mods),
         "conditionalEffects": conditional_effects(effect_lines),
@@ -1219,10 +1391,28 @@ def load_group(group: str) -> dict[str, str]:
     idx = json.loads(io.open(RAW / group / "_index.json", encoding="utf-8").read())
     out = {}
     for title, fname in idx.items():
-        if title in NON_ITEM_PAGES:
+        if title in NON_ITEM_PAGES or title in REMOVED_IN_TARGET:
             continue
         out[title] = io.open(RAW / group / fname, encoding="utf-8").read()
     return out
+
+
+def infobox_kind(text: str) -> str | None:
+    """What a page's own infobox says it is.
+
+    Category membership is not a reliable classifier: some pages sit in
+    several at once (Tonsil was in both Collectibles and Trinkets), which
+    produced two records sharing one page. Sharing a page also means sharing
+    a React key, and the duplicate then appeared in every search result.
+    """
+    for kind, name in (
+        ("trinket", "trinket"),
+        ("active", "activated collectible"),
+        ("passive", "passive collectible"),
+    ):
+        if find_templates(text, "infobox " + name):
+            return kind
+    return None
 
 
 def write_json(path: Path, payload) -> None:
@@ -1248,7 +1438,15 @@ def main() -> int:
         print(f"{group}:")
         parsed = []
         skipped = []
+        cross: list[str] = []
         for title, text in sorted(load_group(group).items()):
+            # Parse a dual-categorised page only under the group its own
+            # infobox agrees with, so it yields exactly one record.
+            declared = infobox_kind(text)
+            is_trinket_group = group == "trinkets"
+            if declared is not None and (declared == "trinket") != is_trinket_group:
+                cross.append(title)
+                continue
             rec = parse_item(title, text, group)
             if rec is None:
                 skipped.append(title)
@@ -1263,6 +1461,8 @@ def main() -> int:
               f"{len(parsed) - with_stats} without")
         if skipped:
             print(f"  ! no infobox ({len(skipped)}): {skipped[:8]}")
+        if cross:
+            print(f"  dual-categorised, parsed in the other group: {cross}")
 
     lines = [
         "# Stat lines needing review",
@@ -1291,6 +1491,10 @@ def main() -> int:
     unused_dps = sorted(set(DPS_UNRELIABLE) - DPS_NOTE_USED - {"Azazel"})
     if unused_dps:
         print(f"! dps notes matched no item (typo or rename?): {unused_dps}")
+    unmatched_pools = sorted(set(POOLS) - POOLS_MATCHED)
+    if unmatched_pools:
+        print(f"  ! {len(unmatched_pools)} pool entries matched no item "
+              f"(first 8: {unmatched_pools[:8]})")
     for label, table, used in (
         ("variant", VARIANTS, VARIANTS_USED),
         ("scaled", SCALED, SCALED_USED),

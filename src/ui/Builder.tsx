@@ -1,6 +1,7 @@
 import { useMemo, useState } from "react";
 import { items as allItems, searchItems } from "../data";
 import {
+  buildHealth,
   buildInteractions,
   buildStats,
   statDeltas,
@@ -17,18 +18,37 @@ interface Props {
   onBack: () => void;
 }
 
-type Filter = "all" | ItemKind | "stats";
+/**
+ * Filters are two independent axes, not one list.
+ *
+ * "Passive / Active / Trinket" is how you hold an item; "stat-affecting" is
+ * whether it moves the numbers. They were originally one mutually exclusive
+ * row, which made the most useful query -- passives that actually affect
+ * stats, 138 of them -- impossible to express. 25% of passives affect stats
+ * and 5% of actives do, so neither implies the other.
+ */
+type KindFilter = "all" | ItemKind;
 
-const FILTERS: { key: Filter; label: string }[] = [
+const KIND_FILTERS: { key: KindFilter; label: string }[] = [
   { key: "all", label: "All" },
-  { key: "stats", label: "Stat-affecting" },
   { key: "passive", label: "Passive" },
   { key: "active", label: "Active" },
-  { key: "trinket", label: "Trinkets" },
+  { key: "trinket", label: "Trinket" },
 ];
 
 // Damage is per tear and Tears is volleys/second -- both as the in-game stat
 // screen reports them. Shot count is kept separate and only enters DPS.
+// Only the heart kinds worth showing a row for; the rest stay at zero for
+// almost every build and would just be noise.
+const HEART_ROWS: [keyof import("../types").Hearts, string, string][] = [
+  ["red", "Red", "is-red"],
+  ["soul", "Soul", "is-soul"],
+  ["black", "Black", "is-black"],
+  ["bone", "Bone", "is-bone"],
+  ["coin", "Coin", "is-coin"],
+  ["broken", "Broken", "is-broken"],
+];
+
 const STAT_ROWS = [
   { key: "damage", label: "Damage", decimals: 2, hint: "per tear" },
   { key: "fireRate", label: "Tears", decimals: 2, hint: "volleys/sec" },
@@ -42,7 +62,9 @@ const STAT_ROWS = [
 
 export function Builder({ build, setBuild, onBack }: Props) {
   const [query, setQuery] = useState("");
-  const [filter, setFilter] = useState<Filter>("all");
+  const [kindFilter, setKindFilter] = useState<KindFilter>("all");
+  const [statsOnly, setStatsOnly] = useState(false);
+  const [pool, setPool] = useState<string>("");
   const [hovered, setHovered] = useState<Item | null>(null);
 
   const picked = useMemo(
@@ -53,13 +75,21 @@ export function Builder({ build, setBuild, onBack }: Props) {
     [build.picked],
   );
 
-  const pool = useMemo(() => {
-    let p = allItems;
-    if (filter === "stats") p = p.filter((i) => i.hasStats);
-    else if (filter !== "all") p = p.filter((i) => i.kind === filter);
-    return searchItems(query, p);
-  }, [query, filter]);
+  // Every pool label present in the data, for the dropdown.
+  const poolNames = useMemo(
+    () => [...new Set(allItems.flatMap((i) => i.pools))].sort(),
+    [],
+  );
 
+  const results = useMemo(() => {
+    let p = allItems;
+    if (kindFilter !== "all") p = p.filter((i) => i.kind === kindFilter);
+    if (statsOnly) p = p.filter((i) => i.hasStats);
+    if (pool) p = p.filter((i) => i.pools.includes(pool));
+    return searchItems(query, p);
+  }, [query, kindFilter, statsOnly, pool]);
+
+  const health = buildHealth(build, picked);
   const stats = buildStats(build, picked);
   const deltas = statDeltas(build, picked);
   const transforms = transformations(picked);
@@ -227,6 +257,63 @@ export function Builder({ build, setBuild, onBack }: Props) {
           </div>
         )}
 
+        <div className="health">
+          <h3>
+            Health
+            <button
+              className="health-reset"
+              onClick={() => setBuild({ ...build, healthDelta: {} })}
+              title="Clear manual adjustments"
+            >
+              reset
+            </button>
+          </h3>
+          <div className="heart-rows">
+            {HEART_ROWS.map(([kind, label, cls]) => (
+              <div key={kind} className="heart-row">
+                <span className={`heart-dot ${cls}`} />
+                <span className="heart-label">{label}</span>
+                <span className="heart-count">{health[kind]}</span>
+                <span className="heart-ctl">
+                  <button
+                    onClick={() =>
+                      setBuild({
+                        ...build,
+                        healthDelta: {
+                          ...build.healthDelta,
+                          [kind]: (build.healthDelta[kind] ?? 0) - 1,
+                        },
+                      })
+                    }
+                    title={`Spend a ${label.toLowerCase()} (Devil deal, damage taken)`}
+                  >
+                    &minus;
+                  </button>
+                  <button
+                    onClick={() =>
+                      setBuild({
+                        ...build,
+                        healthDelta: {
+                          ...build.healthDelta,
+                          [kind]: (build.healthDelta[kind] ?? 0) + 1,
+                        },
+                      })
+                    }
+                  >
+                    +
+                  </button>
+                </span>
+              </div>
+            ))}
+          </div>
+          {form.hearts.unknown === -1 && (
+            <p className="caveat-note">
+              {build.character.name}&rsquo;s starting health is randomised;
+              adjust manually.
+            </p>
+          )}
+        </div>
+
         {tunable.length > 0 && (
           <div className="tuning">
             <h3>Build inputs</h3>
@@ -328,21 +415,41 @@ export function Builder({ build, setBuild, onBack }: Props) {
             autoFocus
           />
           <div className="filters">
-            {FILTERS.map((f) => (
+            {KIND_FILTERS.map((f) => (
               <button
                 key={f.key}
-                className={`chip${filter === f.key ? " is-on" : ""}`}
-                onClick={() => setFilter(f.key)}
+                className={`chip${kindFilter === f.key ? " is-on" : ""}`}
+                onClick={() => setKindFilter(f.key)}
               >
                 {f.label}
               </button>
             ))}
+            <span className="filter-sep" />
+            <button
+              className={`chip${statsOnly ? " is-on" : ""}`}
+              onClick={() => setStatsOnly((v) => !v)}
+              title="Only items with a modelled stat effect"
+            >
+              Stat-affecting
+            </button>
+            <select
+              className="pool-select"
+              value={pool}
+              onChange={(e) => setPool(e.target.value)}
+            >
+              <option value="">Any pool</option>
+              {poolNames.map((n) => (
+                <option key={n} value={n}>
+                  {n}
+                </option>
+              ))}
+            </select>
           </div>
-          <p className="count">{pool.length} shown</p>
+          <p className="count">{results.length} shown</p>
         </div>
 
         <div className="item-grid" onMouseLeave={() => setHovered(null)}>
-          {pool.map((item) => {
+          {results.map((item) => {
             const held = counts.has(item.page);
             return (
             <button
@@ -364,7 +471,7 @@ export function Builder({ build, setBuild, onBack }: Props) {
             </button>
             );
           })}
-          {pool.length === 0 && (
+          {results.length === 0 && (
             <p className="empty">Nothing matches &ldquo;{query}&rdquo;</p>
           )}
         </div>

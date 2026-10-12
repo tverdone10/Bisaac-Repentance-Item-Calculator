@@ -1,10 +1,37 @@
 import type { BaseStats, StatMods } from "./engine/stats";
 
 /** One form of a character. Dual characters (Jacob/Esau) have two. */
+/** Heart containers and hearts, by kind. */
+export interface Hearts {
+  red: number;
+  soul: number;
+  black: number;
+  bone: number;
+  rotten: number;
+  eternal: number;
+  coin: number;
+  broken: number;
+  /** -1 is a sentinel for Eden's randomised start. */
+  unknown: number;
+}
+
+/** Health an item grants on pickup. */
+export interface HealthGrant {
+  redContainers: number;
+  emptyContainers: number;
+  soulHearts: number;
+  blackHearts: number;
+  boneHearts: number;
+  rottenHearts: number;
+  eternalHearts: number;
+  brokenHearts: number;
+}
+
 export interface CharacterForm {
   name: string;
   base: BaseStats;
   health: string;
+  hearts: Hearts;
   /** True for Eden-style randomised stats, which can't be one number. */
   variableStats: boolean;
 }
@@ -24,6 +51,7 @@ export interface Character {
   /** Primary form's stats, promoted for convenience. */
   base: BaseStats;
   health: string;
+  hearts: Hearts;
   forms: CharacterForm[];
   dual: boolean;
   startingItems: string[];
@@ -95,6 +123,8 @@ export interface Item {
   synergies: InteractionLine[];
   interactions: InteractionLine[];
   mods: StatMods;
+  /** Health granted on pickup. */
+  health: HealthGrant;
   stacking: Stacking;
   /** Mutually exclusive variants; pick one rather than summing. */
   variants: ItemVariant[];
