@@ -10,7 +10,14 @@ export interface CharacterForm {
 }
 
 export interface Character {
-  id: number | null;
+  /**
+   * The wiki infobox's "id" field, which is an internal file index rather
+   * than the game's PlayerType -- Isaac reads 14, Cain and Magdalene both
+   * read 2. Kept for traceability; do not sort or identify by it.
+   */
+  wikiFileId: number | null;
+  /** Character-select order as the game presents it. */
+  order: number;
   name: string;
   page: string;
   sprite: string | null;

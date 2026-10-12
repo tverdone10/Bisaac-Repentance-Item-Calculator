@@ -67,163 +67,195 @@ button {
   border: none;
 }
 
-/* ------------------------------------------------------------------ roster */
+/* ----------------------------------------------------- character select */
 
-.roster {
+.select {
   display: grid;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto minmax(0, 1fr);
   height: 100%;
-  padding: 24px 24px 20px;
-  gap: 8px;
+  padding: 20px 22px 18px;
+  gap: 14px;
 }
 
-.roster-head {
+.select-head {
   text-align: center;
 }
 
-.roster-head h1 {
-  font-size: 26px;
-  color: var(--text);
+.select-head h1 {
+  font-size: 24px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   text-shadow: 0 2px 0 #000;
 }
 
 .sub {
-  margin: 6px 0 0;
+  margin: 5px 0 0;
   color: var(--text-faint);
-  font-size: 12px;
-  letter-spacing: 0.06em;
+  font-size: 11px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 
-.carousel {
-  position: relative;
+.select-body {
   display: grid;
-  place-items: center;
+  grid-template-columns: minmax(0, 1fr) 272px;
+  gap: 18px;
   min-height: 0;
-  outline: none;
-  touch-action: none;
-  user-select: none;
 }
 
-.carousel-stage {
-  position: relative;
-  width: 100%;
-  height: 230px;
+.select-grids {
   display: grid;
-  place-items: center;
-  perspective: 1100px;
-  transform-style: preserve-3d;
+  align-content: start;
+  gap: 16px;
+  min-height: 0;
+  overflow-y: auto;
+  scrollbar-color: var(--line) transparent;
+  scrollbar-width: thin;
 }
 
-.char-card {
-  position: absolute;
-  width: 116px;
-  height: 146px;
-  display: grid;
-  grid-template-rows: 1fr auto;
-  place-items: center;
-  gap: 6px;
-  padding: 14px 8px 10px;
-  background: linear-gradient(#201914, #140f0c);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  transition:
-    transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1),
-    opacity 320ms ease,
-    border-color 200ms ease;
-  will-change: transform, opacity;
-}
-
-.char-card.is-tainted {
-  background: linear-gradient(#1a1d26, #0f1116);
-  border-color: #2b3242;
-}
-
-.char-card.is-focused {
-  border-color: var(--blood);
-  box-shadow:
-    0 0 0 1px var(--blood) inset,
-    0 10px 34px rgb(160 30 30 / 0.3),
-    var(--shadow);
-}
-
-.char-sprite {
-  width: 64px;
-  height: 64px;
-  object-fit: contain;
-}
-
-.char-sprite--missing {
-  display: grid;
-  place-items: center;
-  font-size: 28px;
+.roster-label {
+  margin-bottom: 7px;
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
   color: var(--text-faint);
 }
 
-.char-name {
-  font-size: 11px;
-  text-align: center;
-  line-height: 1.2;
-  color: var(--text-dim);
-}
-
-.is-focused .char-name {
-  color: var(--text);
-}
-
-.is-tainted .char-name {
+.roster-label--tainted {
   color: var(--tainted);
 }
 
-.carousel-arrow {
-  position: absolute;
-  top: 50%;
-  translate: 0 -50%;
-  width: 40px;
-  height: 56px;
-  font-size: 28px;
-  color: var(--text-faint);
-  background: rgb(0 0 0 / 0.35);
+.roster-count {
+  color: var(--line);
+}
+
+.portrait-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(84px, 1fr));
+  gap: 5px;
+}
+
+/* Arcade-style portrait tile. The focused one is lifted and outlined so the
+   keyboard cursor is unmistakable. */
+.portrait {
+  position: relative;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  gap: 4px;
+  padding: 9px 5px 6px;
+  background: linear-gradient(#201914, #140f0c);
   border: 1px solid var(--line-soft);
   border-radius: var(--radius);
-  z-index: 200;
-  transition: color 150ms ease, border-color 150ms ease;
+  transition:
+    transform 110ms ease,
+    border-color 110ms ease,
+    box-shadow 110ms ease;
 }
 
-.carousel-arrow:hover {
-  color: var(--text);
-  border-color: var(--blood);
+.portrait.is-tainted {
+  background: linear-gradient(#1a1d26, #0f1116);
 }
 
-.carousel-arrow--left {
-  left: 8px;
+.portrait img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
 }
 
-.carousel-arrow--right {
-  right: 8px;
-}
-
-.roster-detail {
+.portrait-missing {
   display: grid;
-  justify-items: center;
-  gap: 10px;
-  padding-top: 4px;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  font-size: 22px;
+  color: var(--text-faint);
 }
 
-.roster-detail-head {
+.portrait-name {
+  font-size: 9px;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--text-faint);
+}
+
+.portrait.is-focused {
+  transform: translateY(-3px);
+  border-color: var(--blood-bright);
+  box-shadow:
+    0 0 0 1px var(--blood) inset,
+    0 6px 18px rgb(160 30 30 / 0.35);
+  z-index: 2;
+}
+
+.portrait.is-focused .portrait-name {
+  color: var(--text);
+}
+
+.portrait.is-tainted.is-focused {
+  border-color: var(--tainted);
+  box-shadow:
+    0 0 0 1px #3d4a63 inset,
+    0 6px 18px rgb(111 127 168 / 0.3);
+}
+
+/* --------------------------------------------------- select detail panel */
+
+.select-detail {
+  display: grid;
+  align-content: start;
+  gap: 9px;
+  padding: 14px;
+  background: var(--bg-raise);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  overflow-y: auto;
+}
+
+.detail-portrait {
+  display: grid;
+  place-items: center;
+  padding: 10px 0;
+  background:
+    radial-gradient(ellipse at 50% 60%, rgb(160 30 30 / 0.16), transparent 70%);
+}
+
+.detail-portrait img {
+  width: 76px;
+  height: 76px;
+  object-fit: contain;
+}
+
+.select-detail h2 {
+  font-size: 18px;
+  text-align: center;
+}
+
+.detail-tags {
   display: flex;
-  align-items: center;
-  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 4px;
 }
 
-.roster-detail-head h2 {
-  font-size: 20px;
+.detail-line {
+  margin: 0;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
+.detail-label {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
 }
 
 .pill {
   padding: 2px 8px;
-  font-size: 10px;
+  font-size: 9px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   border: 1px solid var(--line);
@@ -242,25 +274,22 @@ button {
 }
 
 .base-stats {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 2px;
   margin: 0;
 }
 
 .base-stat {
   display: grid;
-  gap: 2px;
-  min-width: 86px;
-  padding: 6px 10px;
+  gap: 1px;
+  padding: 5px 8px;
   text-align: center;
-  background: var(--bg-raise);
-  border: 1px solid var(--line-soft);
+  background: var(--bg-cell);
 }
 
 .base-stat dt {
-  font-size: 9px;
+  font-size: 8px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--text-faint);
@@ -269,30 +298,20 @@ button {
 .base-stat dd {
   margin: 0;
   font-family: var(--mono);
-  font-size: 15px;
-  color: var(--text);
-}
-
-.starting {
-  max-width: 560px;
-  margin: 0;
-  font-size: 12px;
-  text-align: center;
-  color: var(--text-dim);
-}
-
-.starting-label {
-  margin-right: 6px;
-  font-size: 9px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--text-faint);
+  font-size: 13px;
 }
 
 .hint {
   margin: 0;
-  font-size: 11px;
+  font-size: 10px;
+  text-align: center;
   color: var(--text-faint);
+}
+
+@media (max-width: 900px) {
+  .select-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
 
 /* ------------------------------------------------------------------ buttons */
@@ -1050,4 +1069,100 @@ button {
 .tune-num span {
   font-size: 10px;
   color: var(--text-faint);
+}
+
+/* -------------------------------------------------------------- build HUD */
+
+/* Your character with the build orbiting them. Deliberately not a
+   reproduction of the in-game look -- no costume sprites exist to composite
+   -- so item icons stand in. */
+.hud {
+  display: grid;
+  gap: 4px;
+  justify-items: center;
+  padding: 4px 0 2px;
+}
+
+.hud-stage {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 196px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 50% 50%, rgb(160 30 30 / 0.1), transparent 68%),
+    var(--bg);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+}
+
+.hud-center img {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  filter: drop-shadow(0 3px 5px rgb(0 0 0 / 0.6));
+}
+
+.hud-ring,
+.hud-orbit,
+.hud-icon {
+  position: absolute;
+}
+
+.hud-ring {
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  animation-name: hud-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.hud-orbit {
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  transform-origin: center;
+}
+
+/* Counter-spin keeps each icon upright while its ring rotates. */
+.hud-icon {
+  display: grid;
+  place-items: center;
+  animation-name: hud-spin;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+.hud-icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+@keyframes hud-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Respect a stated preference for less motion: hold the rings still. */
+@media (prefers-reduced-motion: reduce) {
+  .hud-ring,
+  .hud-icon {
+    animation: none;
+  }
+}
+
+.hud-caption {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.hud-count {
+  color: var(--line);
 }

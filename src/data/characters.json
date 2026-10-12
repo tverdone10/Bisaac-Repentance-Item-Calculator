@@ -1,51 +1,53 @@
 [
   {
-    "id": 2,
-    "name": "Cain",
-    "page": "Cain",
-    "sprite": "sprites/characters/cain.png",
+    "wikiFileId": 14,
+    "order": 0,
+    "name": "Isaac",
+    "page": "Isaac",
+    "sprite": "sprites/characters/isaac.png",
     "base": {
       "damage": 3.5,
-      "damageMultiplier": 1.2,
+      "damageMultiplier": 1.0,
       "tears": 0.0,
       "fireRateMultiplier": 1.0,
       "shotsPerVolley": 1.0,
-      "speed": 1.3,
-      "range": 4.5,
+      "speed": 1.0,
+      "range": 6.5,
       "shotSpeed": 1.0,
       "luck": 0.0
     },
-    "health": "red=2",
+    "health": "red=3",
     "forms": [
       {
-        "name": "Cain",
+        "name": "Isaac",
         "base": {
           "damage": 3.5,
-          "damageMultiplier": 1.2,
+          "damageMultiplier": 1.0,
           "tears": 0.0,
           "fireRateMultiplier": 1.0,
           "shotsPerVolley": 1.0,
-          "speed": 1.3,
-          "range": 4.5,
+          "speed": 1.0,
+          "range": 6.5,
           "shotSpeed": 1.0,
           "luck": 0.0
         },
-        "health": "red=2",
+        "health": "red=3",
         "variableStats": false
       }
     ],
     "dual": false,
     "startingItems": [
-      "Lucky Foot"
+      "The D6"
     ],
-    "pickups": "1 Key Paper Clip",
+    "pickups": "1 bomb",
     "variableStats": false,
     "conditionalFireRate": null,
     "tainted": false,
     "dlc": null
   },
   {
-    "id": 2,
+    "wikiFileId": 2,
+    "order": 1,
     "name": "Magdalene",
     "page": "Magdalene",
     "sprite": "sprites/characters/magdalene.png",
@@ -90,7 +92,54 @@
     "dlc": null
   },
   {
-    "id": 3,
+    "wikiFileId": 2,
+    "order": 2,
+    "name": "Cain",
+    "page": "Cain",
+    "sprite": "sprites/characters/cain.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.2,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.3,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Cain",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.2,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.3,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Lucky Foot"
+    ],
+    "pickups": "1 Key Paper Clip",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "wikiFileId": 3,
+    "order": 3,
     "name": "Judas",
     "page": "Judas",
     "sprite": "sprites/characters/judas.png",
@@ -135,7 +184,8 @@
     "dlc": null
   },
   {
-    "id": 4,
+    "wikiFileId": 4,
+    "order": 4,
     "name": "???",
     "page": "??? (Character)",
     "sprite": "sprites/characters/character.png",
@@ -181,7 +231,8 @@
     "dlc": null
   },
   {
-    "id": 5,
+    "wikiFileId": 5,
+    "order": 5,
     "name": "Eve",
     "page": "Eve",
     "sprite": "sprites/characters/eve.png",
@@ -228,7 +279,8 @@
     "dlc": null
   },
   {
-    "id": 6,
+    "wikiFileId": 6,
+    "order": 6,
     "name": "Samson",
     "page": "Samson",
     "sprite": "sprites/characters/samson.png",
@@ -273,7 +325,8 @@
     "dlc": null
   },
   {
-    "id": 7,
+    "wikiFileId": 7,
+    "order": 7,
     "name": "Azazel",
     "page": "Azazel",
     "sprite": "sprites/characters/azazel.png",
@@ -319,7 +372,8 @@
     "dlc": null
   },
   {
-    "id": 8,
+    "wikiFileId": 8,
+    "order": 8,
     "name": "Lazarus",
     "page": "Lazarus",
     "sprite": "sprites/characters/lazarus.png",
@@ -364,7 +418,8 @@
     "dlc": null
   },
   {
-    "id": 9,
+    "wikiFileId": 9,
+    "order": 9,
     "name": "Eden",
     "page": "Eden",
     "sprite": "sprites/characters/eden.png",
@@ -410,7 +465,8 @@
     "dlc": null
   },
   {
-    "id": 10,
+    "wikiFileId": 10,
+    "order": 10,
     "name": "The Lost",
     "page": "The Lost",
     "sprite": "sprites/characters/the-lost.png",
@@ -459,7 +515,8 @@
     "dlc": null
   },
   {
-    "id": 13,
+    "wikiFileId": 13,
+    "order": 11,
     "name": "Lilith",
     "page": "Lilith",
     "sprite": "sprites/characters/lilith.png",
@@ -506,52 +563,8 @@
     "dlc": "a"
   },
   {
-    "id": 14,
-    "name": "Isaac",
-    "page": "Isaac",
-    "sprite": "sprites/characters/isaac.png",
-    "base": {
-      "damage": 3.5,
-      "damageMultiplier": 1.0,
-      "tears": 0.0,
-      "fireRateMultiplier": 1.0,
-      "shotsPerVolley": 1.0,
-      "speed": 1.0,
-      "range": 6.5,
-      "shotSpeed": 1.0,
-      "luck": 0.0
-    },
-    "health": "red=3",
-    "forms": [
-      {
-        "name": "Isaac",
-        "base": {
-          "damage": 3.5,
-          "damageMultiplier": 1.0,
-          "tears": 0.0,
-          "fireRateMultiplier": 1.0,
-          "shotsPerVolley": 1.0,
-          "speed": 1.0,
-          "range": 6.5,
-          "shotSpeed": 1.0,
-          "luck": 0.0
-        },
-        "health": "red=3",
-        "variableStats": false
-      }
-    ],
-    "dual": false,
-    "startingItems": [
-      "The D6"
-    ],
-    "pickups": "1 bomb",
-    "variableStats": false,
-    "conditionalFireRate": null,
-    "tainted": false,
-    "dlc": null
-  },
-  {
-    "id": 14,
+    "wikiFileId": 14,
+    "order": 12,
     "name": "Keeper",
     "page": "Keeper",
     "sprite": "sprites/characters/keeper.png",
@@ -597,7 +610,8 @@
     "dlc": "a"
   },
   {
-    "id": 15,
+    "wikiFileId": 15,
+    "order": 13,
     "name": "Apollyon",
     "page": "Apollyon",
     "sprite": "sprites/characters/apollyon.png",
@@ -642,7 +656,8 @@
     "dlc": "a+"
   },
   {
-    "id": 16,
+    "wikiFileId": 16,
+    "order": 14,
     "name": "The Forgotten",
     "page": "The Forgotten",
     "sprite": "sprites/characters/the-forgotten.png",
@@ -701,7 +716,8 @@
     "dlc": "a+"
   },
   {
-    "id": 18,
+    "wikiFileId": 18,
+    "order": 15,
     "name": "Bethany",
     "page": "Bethany",
     "sprite": "sprites/characters/bethany.png",
@@ -746,7 +762,8 @@
     "dlc": "r"
   },
   {
-    "id": null,
+    "wikiFileId": null,
+    "order": 16,
     "name": "Jacob and Esau",
     "page": "Jacob and Esau",
     "sprite": "sprites/characters/jacob-and-esau.png",
@@ -805,7 +822,8 @@
     "dlc": "r"
   },
   {
-    "id": 21,
+    "wikiFileId": 21,
+    "order": 17,
     "name": "Tainted Isaac",
     "page": "Tainted Isaac",
     "sprite": "sprites/characters/tainted-isaac.png",
@@ -848,7 +866,8 @@
     "dlc": "r"
   },
   {
-    "id": 22,
+    "wikiFileId": 22,
+    "order": 18,
     "name": "Tainted Magdalene",
     "page": "Tainted Magdalene",
     "sprite": "sprites/characters/tainted-magdalene.png",
@@ -891,7 +910,8 @@
     "dlc": "r"
   },
   {
-    "id": 23,
+    "wikiFileId": 23,
+    "order": 19,
     "name": "Tainted Cain",
     "page": "Tainted Cain",
     "sprite": "sprites/characters/tainted-cain.png",
@@ -934,7 +954,8 @@
     "dlc": "r"
   },
   {
-    "id": 24,
+    "wikiFileId": 24,
+    "order": 20,
     "name": "Tainted Judas",
     "page": "Tainted Judas",
     "sprite": "sprites/characters/tainted-judas.png",
@@ -977,7 +998,8 @@
     "dlc": "r"
   },
   {
-    "id": 25,
+    "wikiFileId": 25,
+    "order": 21,
     "name": "Tainted ???",
     "page": "Tainted ???",
     "sprite": "sprites/characters/tainted.png",
@@ -1020,7 +1042,8 @@
     "dlc": "r"
   },
   {
-    "id": 26,
+    "wikiFileId": 26,
+    "order": 22,
     "name": "Tainted Eve",
     "page": "Tainted Eve",
     "sprite": "sprites/characters/tainted-eve.png",
@@ -1065,7 +1088,8 @@
     "dlc": "r"
   },
   {
-    "id": 27,
+    "wikiFileId": 27,
+    "order": 23,
     "name": "Tainted Samson",
     "page": "Tainted Samson",
     "sprite": "sprites/characters/tainted-samson.png",
@@ -1108,7 +1132,8 @@
     "dlc": "r"
   },
   {
-    "id": 28,
+    "wikiFileId": 28,
+    "order": 24,
     "name": "Tainted Azazel",
     "page": "Tainted Azazel",
     "sprite": "sprites/characters/tainted-azazel.png",
@@ -1151,7 +1176,8 @@
     "dlc": "r"
   },
   {
-    "id": 29,
+    "wikiFileId": 29,
+    "order": 25,
     "name": "Tainted Lazarus",
     "page": "Tainted Lazarus",
     "sprite": "sprites/characters/tainted-lazarus.png",
@@ -1212,7 +1238,8 @@
     "dlc": "r"
   },
   {
-    "id": 30,
+    "wikiFileId": 30,
+    "order": 26,
     "name": "Tainted Eden",
     "page": "Tainted Eden",
     "sprite": "sprites/characters/tainted-eden.png",
@@ -1258,7 +1285,8 @@
     "dlc": "r"
   },
   {
-    "id": 31,
+    "wikiFileId": 31,
+    "order": 27,
     "name": "Tainted Lost",
     "page": "Tainted Lost",
     "sprite": "sprites/characters/tainted-lost.png",
@@ -1304,7 +1332,8 @@
     "dlc": "r"
   },
   {
-    "id": 32,
+    "wikiFileId": 32,
+    "order": 28,
     "name": "Tainted Lilith",
     "page": "Tainted Lilith",
     "sprite": "sprites/characters/tainted-lilith.png",
@@ -1349,7 +1378,8 @@
     "dlc": "r"
   },
   {
-    "id": 33,
+    "wikiFileId": 33,
+    "order": 29,
     "name": "Tainted Keeper",
     "page": "Tainted Keeper",
     "sprite": "sprites/characters/tainted-keeper.png",
@@ -1394,7 +1424,8 @@
     "dlc": "r"
   },
   {
-    "id": 34,
+    "wikiFileId": 34,
+    "order": 30,
     "name": "Tainted Apollyon",
     "page": "Tainted Apollyon",
     "sprite": "sprites/characters/tainted-apollyon.png",
@@ -1437,7 +1468,8 @@
     "dlc": "r"
   },
   {
-    "id": 35,
+    "wikiFileId": 35,
+    "order": 31,
     "name": "Tainted Forgotten",
     "page": "Tainted Forgotten",
     "sprite": "sprites/characters/tainted-forgotten.png",
@@ -1496,7 +1528,8 @@
     "dlc": "r"
   },
   {
-    "id": 36,
+    "wikiFileId": 36,
+    "order": 32,
     "name": "Tainted Bethany",
     "page": "Tainted Bethany",
     "sprite": "sprites/characters/tainted-bethany.png",
@@ -1539,7 +1572,8 @@
     "dlc": "r"
   },
   {
-    "id": 37,
+    "wikiFileId": 37,
+    "order": 33,
     "name": "Tainted Jacob",
     "page": "Tainted Jacob",
     "sprite": "sprites/characters/tainted-jacob.png",

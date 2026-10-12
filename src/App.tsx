@@ -2,7 +2,7 @@ import { useState } from "react";
 import { characters } from "./data";
 import type { Build } from "./engine/build";
 import { Builder } from "./ui/Builder";
-import { CharacterCarousel } from "./ui/CharacterCarousel";
+import { CharacterSelect } from "./ui/CharacterSelect";
 import type { Character } from "./types";
 
 export default function App() {
@@ -18,7 +18,7 @@ export default function App() {
     });
 
   if (!build) {
-    return <CharacterCarousel characters={characters} onPick={start} />;
+    return <CharacterSelect characters={characters} onPick={start} />;
   }
   return (
     <Builder

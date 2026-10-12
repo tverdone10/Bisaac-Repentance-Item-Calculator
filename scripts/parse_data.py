@@ -980,6 +980,23 @@ CHARACTER_SHOTS = {
 }
 
 
+# Character select order, as the game presents it.
+#
+# NOT derivable from the wiki: its infobox "id" field is some internal file
+# index, not a character identifier -- Isaac's page says id=14, and Cain and
+# Magdalene both say 2. Sorting by it put Isaac twelfth.
+ROSTER_ORDER = [
+    "Isaac", "Magdalene", "Cain", "Judas", "???", "Eve", "Samson",
+    "Azazel", "Lazarus", "Eden", "The Lost", "Lilith", "Keeper",
+    "Apollyon", "The Forgotten", "Bethany", "Jacob and Esau",
+    "Tainted Isaac", "Tainted Magdalene", "Tainted Cain", "Tainted Judas",
+    "Tainted ???", "Tainted Eve", "Tainted Samson", "Tainted Azazel",
+    "Tainted Lazarus", "Tainted Eden", "Tainted Lost", "Tainted Lilith",
+    "Tainted Keeper", "Tainted Apollyon", "Tainted Forgotten",
+    "Tainted Bethany", "Tainted Jacob",
+]
+
+
 STAT_FIELDS = (
     ("tears", "tears"), ("speed", "speed"), ("range", "range"),
     ("shot speed", "shotSpeed"), ("luck", "luck"),
@@ -1062,7 +1079,11 @@ def parse_character(title, text):
                 break
 
     return {
-        "id": int(box["id"]) if box.get("id", "").strip().isdigit() else None,
+        # The wiki's "id" is an internal file index, not a character id.
+        # Kept under a clearer name so nobody mistakes it for PlayerType.
+        "wikiFileId": int(box["id"]) if box.get("id", "").strip().isdigit() else None,
+        "order": (ROSTER_ORDER.index(page_name)
+                  if page_name in ROSTER_ORDER else 999),
         "name": page_name,
         "page": title,
         "sprite": sprite_for("characters", title),
@@ -1214,7 +1235,10 @@ def write_json(path: Path, payload) -> None:
 def main() -> int:
     print("characters:")
     chars = [parse_character(t, x) for t, x in sorted(load_group("characters").items())]
-    chars.sort(key=lambda c: (c["tainted"], c["id"] if c["id"] is not None else 999))
+    chars.sort(key=lambda c: c["order"])
+    unordered = [c["name"] for c in chars if c["order"] == 999]
+    if unordered:
+        print(f"! characters missing from ROSTER_ORDER: {unordered}")
     write_json(OUT_TS / "characters.json", chars)
     print(f"  {len(chars)} characters, "
           f"{sum(1 for c in chars if c['variableStats'])} with variable stats")

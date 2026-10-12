@@ -8,6 +8,7 @@ import {
   type Build,
 } from "../engine/build";
 import type { Item, ItemKind } from "../types";
+import { BuildHud } from "./BuildHud";
 import { ItemTooltip, modSummary } from "./ItemTooltip";
 
 interface Props {
@@ -135,6 +136,8 @@ export function Builder({ build, setBuild, onBack }: Props) {
             )}
           </div>
         </div>
+
+        <BuildHud character={build.character} picked={picked} />
 
         {form.variableStats && (
           <p className="warn">

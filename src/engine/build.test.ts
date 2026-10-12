@@ -47,6 +47,26 @@ describe("dataset shape", () => {
     expect(characters.filter((c) => c.tainted)).toHaveLength(17);
   });
 
+  it("orders the roster the way the game's select screen does", () => {
+    // The wiki's infobox "id" is an internal file index, not a character id
+    // (Isaac reads 14, Cain and Magdalene both read 2), so ordering by it
+    // put Isaac twelfth. Order comes from a curated list instead.
+    expect(characters.slice(0, 5).map((c) => c.name)).toEqual([
+      "Isaac",
+      "Magdalene",
+      "Cain",
+      "Judas",
+      "???",
+    ]);
+    // Normal roster first, then tainted, with no interleaving.
+    const firstTainted = characters.findIndex((c) => c.tainted);
+    expect(firstTainted).toBe(17);
+    expect(characters.slice(firstTainted).every((c) => c.tainted)).toBe(true);
+    expect(characters[firstTainted].name).toBe("Tainted Isaac");
+    // Every character placed, none dumped in the 999 bucket.
+    expect(characters.filter((c) => c.order === 999)).toEqual([]);
+  });
+
   it("has every collectible and trinket", () => {
     expect(items.filter((i) => i.kind !== "trinket")).toHaveLength(720);
     expect(items.filter((i) => i.kind === "trinket")).toHaveLength(188);

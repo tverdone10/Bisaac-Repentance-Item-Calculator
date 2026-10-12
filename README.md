@@ -12,7 +12,7 @@ all 34 Repentance+ characters, all six stats, and the full item pool.
 ```bash
 npm install
 npm run dev        # http://localhost:5173
-npm test           # 89 tests
+npm test           # 90 tests
 npm run validate   # cross-check stats against independent wiki pages
 npm run build
 ```
@@ -81,6 +81,12 @@ prevents picking an item twice. The three sourced `stacking` rules remain in
 the data for when an "allow duplicates" toggle is added. Note the trade-off:
 duplicates are reachable in game via Diplopia, Crooked Penny, Damocles and
 Glitched Crown, and those builds currently can't be modelled.
+
+**The wiki's character `id` is not a character id.** Isaac's infobox reads
+`id = 14`, and Cain and Magdalene both read `2` -- it is an internal file
+index. Sorting the roster by it put Isaac twelfth, so select-screen order
+comes from a curated `ROSTER_ORDER` list and the field is stored as
+`wikiFileId` to stop anyone mistaking it for `PlayerType`.
 
 **A missing Repentance value usually means the effect was removed.** Ten
 items (Sacred Heart, Godhead, Crown of Light, ...) carry only a
@@ -299,6 +305,12 @@ project, including `npm run validate`, proves internal consistency only.
 
 ## Not modelled
 
+- **Costume rendering.** The build HUD shows item icons orbiting your
+  character, not Isaac's actual altered appearance. It cannot: the wiki hosts
+  no costume sprites (only 17 of 720 items even name a costume), and the game
+  composites appearance from layered sprite sheets. Familiar "appearance"
+  images exist for only a minority of familiar items and at wildly
+  inconsistent sizes (28x38 to 187x240, some of them screenshots).
 - **Synergy effects.** Interactions are displayed, never simulated. Brimstone
   + Tech X can't be expressed as a stat delta, and there are thousands of
   pairs. Nothing in the Interactions panel affects the computed stats.
