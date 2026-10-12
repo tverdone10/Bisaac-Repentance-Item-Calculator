@@ -1,0 +1,1584 @@
+[
+  {
+    "id": 2,
+    "name": "Cain",
+    "page": "Cain",
+    "sprite": "sprites/characters/cain.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.2,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.3,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Cain",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.2,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.3,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Lucky Foot"
+    ],
+    "pickups": "1 Key Paper Clip",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 2,
+    "name": "Magdalene",
+    "page": "Magdalene",
+    "sprite": "sprites/characters/magdalene.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 0.85,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=4",
+    "forms": [
+      {
+        "name": "Magdalene",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 0.85,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=4",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Yum Heart"
+    ],
+    "pickups": "1 Speed Up pill 1 Full Health pill",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 3,
+    "name": "Judas",
+    "page": "Judas",
+    "sprite": "sprites/characters/judas.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.35,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "",
+    "forms": [
+      {
+        "name": "Judas",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.35,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "The Book of Belial"
+    ],
+    "pickups": "3 coins",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 4,
+    "name": "???",
+    "page": "??? (Character)",
+    "sprite": "sprites/characters/character.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.05,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.1,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "soul=3",
+    "forms": [
+      {
+        "name": "???",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.05,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.1,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "soul=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "The Poop",
+      "Innate Lil Larva"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 5,
+    "name": "Eve",
+    "page": "Eve",
+    "sprite": "sprites/characters/eve.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 0.75,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.23,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Eve",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 0.75,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.23,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Whore of Babylon",
+      "Dead Bird",
+      "Razor Blade"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 6,
+    "name": "Samson",
+    "page": "Samson",
+    "sprite": "sprites/characters/samson.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": -0.1,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.1,
+      "range": 5.0,
+      "shotSpeed": 1.31,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Samson",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": -0.1,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.1,
+          "range": 5.0,
+          "shotSpeed": 1.31,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Bloody Lust"
+    ],
+    "pickups": "Child's Heart",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 7,
+    "name": "Azazel",
+    "page": "Azazel",
+    "sprite": "sprites/characters/azazel.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.5,
+      "tears": 0.5,
+      "fireRateMultiplier": 0.267,
+      "shotsPerVolley": 1.0,
+      "speed": 1.25,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "black=3",
+    "forms": [
+      {
+        "name": "Azazel",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.5,
+          "tears": 0.5,
+          "fireRateMultiplier": 0.267,
+          "shotsPerVolley": 1.0,
+          "speed": 1.25,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "black=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Short range Brimstone",
+      "Flight"
+    ],
+    "pickups": "0 - The Fool",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 8,
+    "name": "Lazarus",
+    "page": "Lazarus",
+    "sprite": "sprites/characters/lazarus.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": -1.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Lazarus",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": -1.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Anemic"
+    ],
+    "pickups": "1 pill",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 9,
+    "name": "Eden",
+    "page": "Eden",
+    "sprite": "sprites/characters/eden.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.75,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "84px|link=Eden Generation#Hearts|Random",
+    "forms": [
+      {
+        "name": "Eden",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.75,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "84px|link=Eden Generation#Hearts|Random",
+        "variableStats": true
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Random active item",
+      "Random passive item"
+    ],
+    "pickups": "0-2 bombs 0-1 key 0-5 coins 0-1 trinket, pill, or card",
+    "variableStats": true,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 10,
+    "name": "The Lost",
+    "page": "The Lost",
+    "sprite": "sprites/characters/the-lost.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "",
+    "forms": [
+      {
+        "name": "The Lost",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Flight",
+      "Spectral tears",
+      "D4",
+      "Eternal D6",
+      "Holy Mantle"
+    ],
+    "pickups": "1 coin",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 13,
+    "name": "Lilith",
+    "page": "Lilith",
+    "sprite": "sprites/characters/lilith.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red|black=2",
+    "forms": [
+      {
+        "name": "Lilith",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red|black=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Box of Friends (unlisted)",
+      "Incubus",
+      "Cambion Conception"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "a"
+  },
+  {
+    "id": 14,
+    "name": "Isaac",
+    "page": "Isaac",
+    "sprite": "sprites/characters/isaac.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Isaac",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "The D6"
+    ],
+    "pickups": "1 bomb",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": null
+  },
+  {
+    "id": 14,
+    "name": "Keeper",
+    "page": "Keeper",
+    "sprite": "sprites/characters/keeper.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.2,
+      "tears": -1.9,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 3,
+      "speed": 0.9,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": -2.0
+    },
+    "health": "coin=2 coin=3",
+    "forms": [
+      {
+        "name": "Keeper",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.2,
+          "tears": -1.9,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 3,
+          "speed": 0.9,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": -2.0
+        },
+        "health": "coin=2 coin=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Triple shot",
+      "Wooden Nickel"
+    ],
+    "pickups": "1 bomb 1 coin Store Key",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "a"
+  },
+  {
+    "id": 15,
+    "name": "Apollyon",
+    "page": "Apollyon",
+    "sprite": "sprites/characters/apollyon.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Apollyon",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Void"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "a+"
+  },
+  {
+    "id": 16,
+    "name": "The Forgotten",
+    "page": "The Forgotten",
+    "sprite": "sprites/characters/the-forgotten.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.5,
+      "tears": 0.0,
+      "fireRateMultiplier": 0.5,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "bone=2",
+    "forms": [
+      {
+        "name": "The Forgotten",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.5,
+          "tears": 0.0,
+          "fireRateMultiplier": 0.5,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "bone=2",
+        "variableStats": false
+      },
+      {
+        "name": "The Soul",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.3,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "",
+        "variableStats": false
+      }
+    ],
+    "dual": true,
+    "startingItems": [],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "a+"
+  },
+  {
+    "id": 18,
+    "name": "Bethany",
+    "page": "Bethany",
+    "sprite": "sprites/characters/bethany.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Bethany",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Book of Virtues"
+    ],
+    "pickups": "4 soul charges",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "r"
+  },
+  {
+    "id": null,
+    "name": "Jacob and Esau",
+    "page": "Jacob and Esau",
+    "sprite": "sprites/characters/jacob-and-esau.png",
+    "base": {
+      "damage": 2.75,
+      "damageMultiplier": 1.0,
+      "tears": 0.277,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 5.0,
+      "shotSpeed": 1.15,
+      "luck": 1.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Jacob",
+        "base": {
+          "damage": 2.75,
+          "damageMultiplier": 1.0,
+          "tears": 0.277,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 5.0,
+          "shotSpeed": 1.15,
+          "luck": 1.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      },
+      {
+        "name": "Esau",
+        "base": {
+          "damage": 3.75,
+          "damageMultiplier": 1.0,
+          "tears": -0.1,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 8.0,
+          "shotSpeed": 0.85,
+          "luck": -1.0
+        },
+        "health": "red=1soul=1",
+        "variableStats": false
+      }
+    ],
+    "dual": true,
+    "startingItems": [],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": false,
+    "dlc": "r"
+  },
+  {
+    "id": 21,
+    "name": "Tainted Isaac",
+    "page": "Tainted Isaac",
+    "sprite": "sprites/characters/tainted-isaac.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Tainted Isaac",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "1 bomb",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 22,
+    "name": "Tainted Magdalene",
+    "page": "Tainted Magdalene",
+    "sprite": "sprites/characters/tainted-magdalene.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 0.75,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Tainted Magdalene",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 0.75,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "Yum Heart",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 23,
+    "name": "Tainted Cain",
+    "page": "Tainted Cain",
+    "sprite": "sprites/characters/tainted-cain.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.2,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.3,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Tainted Cain",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.2,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.3,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "1 key Bag of Crafting",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 24,
+    "name": "Tainted Judas",
+    "page": "Tainted Judas",
+    "sprite": "sprites/characters/tainted-judas.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.23,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "black=2",
+    "forms": [
+      {
+        "name": "Tainted Judas",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.23,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "black=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "3 Coins Dark Arts",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 25,
+    "name": "Tainted ???",
+    "page": "Tainted ???",
+    "sprite": "sprites/characters/tainted.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": -0.35,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 0.9,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "soul=3",
+    "forms": [
+      {
+        "name": "Tainted ???",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": -0.35,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 0.9,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "soul=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "3 Poop bombs Hold",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 26,
+    "name": "Tainted Eve",
+    "page": "Tainted Eve",
+    "sprite": "sprites/characters/tainted-eve.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.2,
+      "tears": -0.5,
+      "fireRateMultiplier": 0.66,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Tainted Eve",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.2,
+          "tears": -0.5,
+          "fireRateMultiplier": 0.66,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Sumptorium"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 27,
+    "name": "Tainted Samson",
+    "page": "Tainted Samson",
+    "sprite": "sprites/characters/tainted-samson.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": -0.1,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 5.0,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Tainted Samson",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": -0.1,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 5.0,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": "x0.5 fire rate, then +2, while berserking",
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 28,
+    "name": "Tainted Azazel",
+    "page": "Tainted Azazel",
+    "sprite": "sprites/characters/tainted-azazel.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.5,
+      "tears": 0.0,
+      "fireRateMultiplier": 0.3333333333333333,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "black=3",
+    "forms": [
+      {
+        "name": "Tainted Azazel",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.5,
+          "tears": 0.0,
+          "fireRateMultiplier": 0.3333333333333333,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "black=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "0 - The Fool",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 29,
+    "name": "Tainted Lazarus",
+    "page": "Tainted Lazarus",
+    "sprite": "sprites/characters/tainted-lazarus.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 4.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Tainted Lazarus",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 4.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      },
+      {
+        "name": "Dead Tainted Lazarus",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.5,
+          "tears": -0.1,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 0.9,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": -2.0
+        },
+        "health": "soul=2",
+        "variableStats": false
+      }
+    ],
+    "dual": true,
+    "startingItems": [
+      "Flip"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 30,
+    "name": "Tainted Eden",
+    "page": "Tainted Eden",
+    "sprite": "sprites/characters/tainted-eden.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.75,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "84px|link=Eden Generation#Hearts|Random",
+    "forms": [
+      {
+        "name": "Tainted Eden",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.75,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "84px|link=Eden Generation#Hearts|Random",
+        "variableStats": true
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Random active item",
+      "Random passive item"
+    ],
+    "pickups": "0-2 Bomb(s) 0-1 Key(s) 0-5 Coin(s) 0-1 Trinket, Pill, or Card",
+    "variableStats": true,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 31,
+    "name": "Tainted Lost",
+    "page": "Tainted Lost",
+    "sprite": "sprites/characters/tainted-lost.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.3,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "",
+    "forms": [
+      {
+        "name": "Tainted Lost",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.3,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Flight",
+      "Spectral tears"
+    ],
+    "pickups": "1 coin Holy Card",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 32,
+    "name": "Tainted Lilith",
+    "page": "Tainted Lilith",
+    "sprite": "sprites/characters/tainted-lilith.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 0.85,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red|black=2",
+    "forms": [
+      {
+        "name": "Tainted Lilith",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 0.85,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red|black=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "None"
+    ],
+    "pickups": "",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 33,
+    "name": "Tainted Keeper",
+    "page": "Tainted Keeper",
+    "sprite": "sprites/characters/tainted-keeper.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": -2.2,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 4,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": -2.0
+    },
+    "health": "coin=2",
+    "forms": [
+      {
+        "name": "Tainted Keeper",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": -2.2,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 4,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": -2.0
+        },
+        "health": "coin=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [
+      "Quadruple shot"
+    ],
+    "pickups": "1 Bomb",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 34,
+    "name": "Tainted Apollyon",
+    "page": "Tainted Apollyon",
+    "sprite": "sprites/characters/tainted-apollyon.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": -0.5,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=2",
+    "forms": [
+      {
+        "name": "Tainted Apollyon",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": -0.5,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=2",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "Abyss",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 35,
+    "name": "Tainted Forgotten",
+    "page": "Tainted Forgotten",
+    "sprite": "sprites/characters/tainted-forgotten.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.5,
+      "tears": 0.0,
+      "fireRateMultiplier": 0.5,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "Invulnerable",
+    "forms": [
+      {
+        "name": "Tainted Forgotten",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.5,
+          "tears": 0.0,
+          "fireRateMultiplier": 0.5,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "Invulnerable",
+        "variableStats": true
+      },
+      {
+        "name": "Tainted Soul",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "soul=3",
+        "variableStats": true
+      }
+    ],
+    "dual": true,
+    "startingItems": [],
+    "pickups": "",
+    "variableStats": true,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 36,
+    "name": "Tainted Bethany",
+    "page": "Tainted Bethany",
+    "sprite": "sprites/characters/tainted-bethany.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.0,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "soul=3",
+    "forms": [
+      {
+        "name": "Tainted Bethany",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.0,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "soul=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "6 blood charges Lemegeton",
+    "variableStats": false,
+    "conditionalFireRate": "x0.75 on fire rate gained above base",
+    "tainted": true,
+    "dlc": "r"
+  },
+  {
+    "id": 37,
+    "name": "Tainted Jacob",
+    "page": "Tainted Jacob",
+    "sprite": "sprites/characters/tainted-jacob.png",
+    "base": {
+      "damage": 3.5,
+      "damageMultiplier": 1.0,
+      "tears": 0.277,
+      "fireRateMultiplier": 1.0,
+      "shotsPerVolley": 1.0,
+      "speed": 1.0,
+      "range": 6.5,
+      "shotSpeed": 1.0,
+      "luck": 0.0
+    },
+    "health": "red=3",
+    "forms": [
+      {
+        "name": "Tainted Jacob",
+        "base": {
+          "damage": 3.5,
+          "damageMultiplier": 1.0,
+          "tears": 0.277,
+          "fireRateMultiplier": 1.0,
+          "shotsPerVolley": 1.0,
+          "speed": 1.0,
+          "range": 6.5,
+          "shotSpeed": 1.0,
+          "luck": 0.0
+        },
+        "health": "red=3",
+        "variableStats": false
+      }
+    ],
+    "dual": false,
+    "startingItems": [],
+    "pickups": "Anima Sola",
+    "variableStats": false,
+    "conditionalFireRate": null,
+    "tainted": true,
+    "dlc": "r"
+  }
+]

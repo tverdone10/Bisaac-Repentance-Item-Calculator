@@ -1,0 +1,78 @@
+{
+  "_comment": [
+    "Items whose stat effect is one of several mutually exclusive variants,",
+    "and items whose bonus scales with a countable game quantity.",
+    "",
+    "Both are hand-entered from the item's Effects section because the",
+    "structure only exists in prose. Summing a variant list would describe a",
+    "state that never occurs in game (you have one Purity colour, not four),",
+    "and treating a per-unit bonus as a constant is just wrong.",
+    "",
+    "'variants': pick exactly one. The first is the default shown.",
+    "'scaled':   mods are granted PER UNIT of 'quantity', capped at 'max'."
+  ],
+
+  "variants": {
+    "Purity": {
+      "source": "Effects: Red/Blue/Yellow/Orange aura, one at a time",
+      "options": [
+        { "label": "Red (damage)", "mods": { "damageUps": 4 } },
+        { "label": "Blue (fire rate)", "mods": { "fireRateAdd": 2.0 } },
+        { "label": "Yellow (speed)", "mods": { "speed": 0.5 } },
+        { "label": "Orange (range)", "mods": { "range": 3.0 } }
+      ]
+    },
+
+    "Abyss": {
+      "source": "Effects: locust damage multiplier keyed to absorbed item quality",
+      "options": [
+        { "label": "Quality 0", "mods": { "damageMultipliers": [0.5] } },
+        { "label": "Quality 1", "mods": { "damageMultipliers": [0.75] } },
+        { "label": "Quality 2", "mods": { "damageMultipliers": [1.0] } },
+        { "label": "Quality 3", "mods": { "damageMultipliers": [1.5] } },
+        { "label": "Quality 4", "mods": { "damageMultipliers": [2.0] } }
+      ]
+    },
+
+    "Playdough Cookie": {
+      "source": "Effects: each tear rolls a colour; Red grants 2x damage",
+      "options": [
+        { "label": "No bonus (brown)", "mods": {} },
+        { "label": "Red (2x damage)", "mods": { "damageMultipliers": [2.0] } }
+      ]
+    }
+  },
+
+  "scaled": {
+    "Money = Power": {
+      "quantity": "coins held",
+      "per": { "damageUps": 0.04 },
+      "max": 99,
+      "source": "Adds 0.04 damage for every Penny Isaac has; caps at +3.96 at 99 coins"
+    },
+    "Brittle Bones": {
+      "quantity": "Bone Hearts lost",
+      "per": { "fireRateAdd": 0.4 },
+      "max": null,
+      "source": "Each Bone Heart lost adds a permanent +0.4 fire rate, which can break the tear fire rate cap"
+    },
+    "False PHD": {
+      "quantity": "stat-down pills taken",
+      "per": { "damageUps": 0.6 },
+      "max": null,
+      "source": "Grants +0.6 damage for each stat down pill (and +1.2 per horse pill) Isaac has taken"
+    },
+    "Bloody Gust": {
+      "quantity": "stacks (max 6)",
+      "per": { "speed": 0.17, "fireRateAdd": 0.5 },
+      "max": 6,
+      "source": "Both effects stack up to six times, for a total of +1.02 speed and +3 fire rate"
+    },
+    "Keeper's Sack": {
+      "quantity": "cycle steps (3 coins each)",
+      "per": { "damageUps": 0.1667, "range": 0.0833, "speed": 0.01 },
+      "max": null,
+      "source": "Every 3 coins spent grants in a cycle: +0.5 damage, then +0.25 range, then +0.03 speed (averaged per step)"
+    }
+  }
+}

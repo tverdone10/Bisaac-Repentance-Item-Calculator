@@ -1,0 +1,295 @@
+{
+  "target": "Repentance+",
+  "codes": {
+    "a": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth",
+      "alt": "except in Rebirth"
+    },
+    "a+": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth †",
+      "alt": "except in Rebirth and Afterbirth"
+    },
+    "r": {
+      "applies_to_target": true,
+      "versions": [
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Added in Repentance",
+      "alt": "in Repentance and Repentance+"
+    },
+    "r+": {
+      "applies_to_target": true,
+      "versions": [
+        "Repentance+"
+      ],
+      "label": "Added in Repentance+",
+      "alt": "in Repentance+"
+    },
+    "na": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth"
+      ],
+      "label": "Removed in Afterbirth",
+      "alt": "in Rebirth"
+    },
+    "na+": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth"
+      ],
+      "label": "Removed in Afterbirth †",
+      "alt": "in Rebirth and Afterbirth"
+    },
+    "nr": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +"
+      ],
+      "label": "Removed in Repentance",
+      "alt": "except in Repentance and Repentance+"
+    },
+    "nr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance"
+      ],
+      "label": "Removed in Repentance+",
+      "alt": "except in Repentance+"
+    },
+    "ana+": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth"
+      ],
+      "label": "Added in Afterbirth / Removed in Afterbirth †",
+      "alt": "in Afterbirth"
+    },
+    "anr": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth",
+        "Afterbirth †"
+      ],
+      "label": "Added in Afterbirth / Removed in Repentance",
+      "alt": "in Afterbirth and Afterbirth †"
+    },
+    "anr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance"
+      ],
+      "label": "Added in Afterbirth / Removed in Repentance+",
+      "alt": "except in Rebirth and Repentance+"
+    },
+    "a+nr": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth †"
+      ],
+      "label": "Added in Afterbirth † / Removed in Repentance",
+      "alt": "in Afterbirth †"
+    },
+    "a+nr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth †",
+        "Repentance"
+      ],
+      "label": "Added in Afterbirth † / Removed in Repentance+",
+      "alt": "in Afterbirth † and Repentance"
+    },
+    "rnr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Repentance"
+      ],
+      "label": "Added in Repentance / Removed in Repentance+",
+      "alt": "in Repentance"
+    },
+    "naa+": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Afterbirth †",
+      "alt": "except in Afterbirth"
+    },
+    "nar": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Repentance",
+      "alt": "except in Afterbirth and Afterbirth †"
+    },
+    "nar+": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth / Added in Repentance+",
+      "alt": "in Rebirth and Repentance+"
+    },
+    "na+r": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth † / Re-added in Repentance",
+      "alt": "except in Afterbirth †"
+    },
+    "na+r+": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth † / Re-added in Repentance+",
+      "alt": "except in Afterbirth † and Repentance"
+    },
+    "nrr+": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance+"
+      ],
+      "label": "Removed in Repentance / Re-added in Repentance+",
+      "alt": "except in Repentance"
+    },
+    "ana+r": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth / Removed in Afterbirth † / Re-added in Repentance",
+      "alt": "except in Rebirth and Afterbirth †"
+    },
+    "ana+r+": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth / Removed in Afterbirth † / Re-added in Repentance+",
+      "alt": "in Afterbirth and Repentance+"
+    },
+    "anrr+": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth / Removed in Repentance / Re-added in Repentance+",
+      "alt": "except in Rebirth and Repentance"
+    },
+    "a+nrr+": {
+      "applies_to_target": true,
+      "versions": [
+        "Afterbirth †",
+        "Repentance+"
+      ],
+      "label": "Added in Afterbirth † / Removed in Repentance / Re-added in Repentance+",
+      "alt": "in Afterbirth † and Repentance+"
+    },
+    "naa+nr": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth †"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Afterbirth † / Re-removed in Repentance",
+      "alt": "in Rebirth and Afterbirth †"
+    },
+    "naa+nr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth +",
+        "Repentance"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Afterbirth † / Re-removed in Repentance+",
+      "alt": "except in Afterbirth and Repentance+"
+    },
+    "narnr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Repentance"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Repentance / Re-removed in Repentance+",
+      "alt": "in Rebirth and Repentance"
+    },
+    "na+rnr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Rebirth",
+        "Afterbirth",
+        "Afterbirth +",
+        "Repentance"
+      ],
+      "label": "Removed in Afterbirth † / Re-added in Repentance / Re-removed in Repentance+",
+      "alt": "except in Afterbirth † and Repentance+"
+    },
+    "ana+rnr+": {
+      "applies_to_target": false,
+      "versions": [
+        "Afterbirth",
+        "Repentance"
+      ],
+      "label": "Added in Afterbirth / Removed in Afterbirth † / Re-added in Repentance / Re-removed in Repentance+",
+      "alt": "in Afterbirth and Repentance"
+    },
+    "naa+nrr+": {
+      "applies_to_target": true,
+      "versions": [
+        "Rebirth",
+        "Afterbirth +",
+        "Repentance+"
+      ],
+      "label": "Removed in Afterbirth / Re-added in Afterbirth † / Re-removed in Repentance / Re-added in Repentance+",
+      "alt": "except in Afterbirth and Repentance"
+    }
+  }
+}

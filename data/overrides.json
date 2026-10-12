@@ -1,0 +1,40 @@
+{
+  "_comment": [
+    "Hand-verified stat modifiers for items the text extractor cannot read",
+    "correctly. Each entry records WHY it is needed so it can be re-audited",
+    "against the wiki later. 'mods' is merged over the parsed result;",
+    "'replace: true' discards the parsed mods entirely for that item.",
+    "",
+    "Only add an entry after reading the item's Effects section. These are",
+    "the numbers the calculator will show, so a guess here is worse than a",
+    "visible gap."
+  ],
+
+  "Polyphemus": {
+    "reason": "Damage is stated only as the formula '(Damage + 4) * 2', which the text extractor cannot interpret. Fire rate multiplier parses fine on its own.",
+    "mods": { "flatDamage": 4, "damageMultipliers": [2] }
+  },
+
+  "Cricket's Head": {
+    "reason": "Its x1.5 belongs to the non-stacking group with Magic Mushroom and Blood of the Martyr + Book of Belial: holding several still yields 1.5x total.",
+    "mods": { "damageUps": 0.5, "damageMultipliers": [], "nonStackingMultipliers": [1.5] },
+    "replace": true
+  },
+
+  "Magic Mushroom": {
+    "reason": "Same non-stacking 1.5x group as Cricket's Head. Also grants a heart container, which is not a tracked stat.",
+    "mods": {
+      "damageUps": 0.3,
+      "damageMultipliers": [],
+      "nonStackingMultipliers": [1.5],
+      "speed": 0.3,
+      "range": 2.5
+    },
+    "replace": true
+  },
+
+  "The Book of Belial": {
+    "reason": "The 1.5x damage it grants (and its combination with Blood of the Martyr) is part of the non-stacking group. Active item, effect is per-room rather than permanent.",
+    "mods": { "nonStackingMultipliers": [1.5] }
+  }
+}

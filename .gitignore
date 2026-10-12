@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.vite/
+*.local
+tsconfig.tsbuildinfo
+
+# Raw wikitext cache: 5.8MB, only needed to re-run the parser.
+# Regenerate with `npm run data`.
+data/raw/
+
+# public/sprites/ IS committed. It is only 1.4MB and the build needs it,
+# so excluding it would break any deploy that builds from a clean checkout.

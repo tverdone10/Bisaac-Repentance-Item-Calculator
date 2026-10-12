@@ -1,0 +1,1053 @@
+/* Isaac build calculator.
+   Palette leans on the game's grimy basement look: desaturated browns over
+   near-black, with blood red as the single accent. */
+
+:root {
+  --bg: #0e0c0b;
+  --bg-raise: #17130f;
+  --bg-cell: #221b16;
+  --line: #342a22;
+  --line-soft: #241d18;
+  --text: #e8dfd2;
+  --text-dim: #9b8c7a;
+  --text-faint: #6b5e50;
+  --blood: #a01e1e;
+  --blood-bright: #d93636;
+  --gold: #d2a24c;
+  --up: #7bbd5a;
+  --down: #cf5a4e;
+  --tainted: #6f7fa8;
+
+  --radius: 4px;
+  --shadow: 0 6px 20px rgb(0 0 0 / 0.55);
+  --font: "Trebuchet MS", "Segoe UI", system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% -10%, #241a14 0%, transparent 60%),
+    var(--bg);
+  color: var(--text);
+  font-family: var(--font);
+  font-size: 14px;
+  overflow: hidden;
+}
+
+/* Game sprites are tiny pixel art; never smooth them. */
+img {
+  image-rendering: pixelated;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+/* ------------------------------------------------------------------ roster */
+
+.roster {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  padding: 24px 24px 20px;
+  gap: 8px;
+}
+
+.roster-head {
+  text-align: center;
+}
+
+.roster-head h1 {
+  font-size: 26px;
+  color: var(--text);
+  text-shadow: 0 2px 0 #000;
+}
+
+.sub {
+  margin: 6px 0 0;
+  color: var(--text-faint);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.carousel {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 0;
+  outline: none;
+  touch-action: none;
+  user-select: none;
+}
+
+.carousel-stage {
+  position: relative;
+  width: 100%;
+  height: 230px;
+  display: grid;
+  place-items: center;
+  perspective: 1100px;
+  transform-style: preserve-3d;
+}
+
+.char-card {
+  position: absolute;
+  width: 116px;
+  height: 146px;
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  gap: 6px;
+  padding: 14px 8px 10px;
+  background: linear-gradient(#201914, #140f0c);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  transition:
+    transform 320ms cubic-bezier(0.22, 0.61, 0.36, 1),
+    opacity 320ms ease,
+    border-color 200ms ease;
+  will-change: transform, opacity;
+}
+
+.char-card.is-tainted {
+  background: linear-gradient(#1a1d26, #0f1116);
+  border-color: #2b3242;
+}
+
+.char-card.is-focused {
+  border-color: var(--blood);
+  box-shadow:
+    0 0 0 1px var(--blood) inset,
+    0 10px 34px rgb(160 30 30 / 0.3),
+    var(--shadow);
+}
+
+.char-sprite {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+}
+
+.char-sprite--missing {
+  display: grid;
+  place-items: center;
+  font-size: 28px;
+  color: var(--text-faint);
+}
+
+.char-name {
+  font-size: 11px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--text-dim);
+}
+
+.is-focused .char-name {
+  color: var(--text);
+}
+
+.is-tainted .char-name {
+  color: var(--tainted);
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  translate: 0 -50%;
+  width: 40px;
+  height: 56px;
+  font-size: 28px;
+  color: var(--text-faint);
+  background: rgb(0 0 0 / 0.35);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--radius);
+  z-index: 200;
+  transition: color 150ms ease, border-color 150ms ease;
+}
+
+.carousel-arrow:hover {
+  color: var(--text);
+  border-color: var(--blood);
+}
+
+.carousel-arrow--left {
+  left: 8px;
+}
+
+.carousel-arrow--right {
+  right: 8px;
+}
+
+.roster-detail {
+  display: grid;
+  justify-items: center;
+  gap: 10px;
+  padding-top: 4px;
+}
+
+.roster-detail-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.roster-detail-head h2 {
+  font-size: 20px;
+}
+
+.pill {
+  padding: 2px 8px;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text-dim);
+}
+
+.pill--warn {
+  color: var(--gold);
+  border-color: #5a4728;
+}
+
+.pill--dual {
+  color: var(--tainted);
+  border-color: #2b3242;
+}
+
+.base-stats {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+  margin: 0;
+}
+
+.base-stat {
+  display: grid;
+  gap: 2px;
+  min-width: 86px;
+  padding: 6px 10px;
+  text-align: center;
+  background: var(--bg-raise);
+  border: 1px solid var(--line-soft);
+}
+
+.base-stat dt {
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.base-stat dd {
+  margin: 0;
+  font-family: var(--mono);
+  font-size: 15px;
+  color: var(--text);
+}
+
+.starting {
+  max-width: 560px;
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+  color: var(--text-dim);
+}
+
+.starting-label {
+  margin-right: 6px;
+  font-size: 9px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.hint {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+/* ------------------------------------------------------------------ buttons */
+
+.btn {
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--bg-cell);
+  transition: background 150ms ease, border-color 150ms ease;
+}
+
+.btn:hover {
+  border-color: var(--blood);
+}
+
+.btn--primary {
+  background: linear-gradient(var(--blood), #7a1616);
+  border-color: var(--blood-bright);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  background: linear-gradient(var(--blood-bright), #8f1a1a);
+}
+
+.btn--ghost {
+  padding: 5px 10px;
+  font-size: 11px;
+  font-weight: 400;
+  color: var(--text-dim);
+  background: none;
+}
+
+.btn--back {
+  justify-self: start;
+}
+
+/* ----------------------------------------------------------------- builder */
+
+.builder {
+  display: grid;
+  grid-template-columns: 236px minmax(0, 1fr) 300px;
+  height: 100%;
+  gap: 1px;
+  background: var(--line-soft);
+}
+
+.panel {
+  min-height: 0;
+  overflow-y: auto;
+  background: var(--bg);
+  scrollbar-color: var(--line) transparent;
+  scrollbar-width: thin;
+}
+
+.panel--stats {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 14px;
+  background: var(--bg-raise);
+}
+
+.who {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.who h2 {
+  font-size: 16px;
+}
+
+.who-sprite {
+  width: 44px;
+  height: 44px;
+}
+
+.form-switch {
+  display: flex;
+  gap: 4px;
+  margin-top: 4px;
+}
+
+.chip {
+  padding: 3px 9px;
+  font-size: 10px;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  background: var(--bg-cell);
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  transition: all 150ms ease;
+}
+
+.chip:hover {
+  color: var(--text);
+}
+
+.chip.is-on {
+  color: #fff;
+  background: var(--blood);
+  border-color: var(--blood-bright);
+}
+
+.warn {
+  margin: 0;
+  padding: 7px 9px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--gold);
+  background: rgb(210 162 76 / 0.08);
+  border-left: 2px solid var(--gold);
+}
+
+.stats {
+  display: grid;
+  gap: 1px;
+  margin: 0;
+  background: var(--line-soft);
+}
+
+.stat-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--bg-cell);
+}
+
+.stat-row.is-emphasis {
+  background: #2a1d18;
+}
+
+.stat-row dt {
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.stat-row.is-emphasis dt {
+  color: var(--gold);
+}
+
+.stat-row dd {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin: 0;
+}
+
+.stat-value {
+  font-family: var(--mono);
+  font-size: 15px;
+}
+
+.is-emphasis .stat-value {
+  font-size: 17px;
+  color: var(--gold);
+}
+
+.stat-delta {
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.stat-delta.is-up,
+.tt-mods .is-up {
+  color: var(--up);
+}
+
+.stat-delta.is-down,
+.tt-mods .is-down {
+  color: var(--down);
+}
+
+.tear-delay {
+  margin: -8px 0 0;
+  font-family: var(--mono);
+  font-size: 10px;
+  color: var(--text-faint);
+}
+
+.transforms {
+  display: grid;
+  gap: 3px;
+}
+
+.transforms h3 {
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.transform {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 8px;
+  font-size: 11px;
+  color: var(--text-dim);
+  background: var(--bg-cell);
+  border-left: 2px solid var(--line);
+}
+
+.transform.is-active {
+  color: var(--text);
+  border-left-color: var(--up);
+}
+
+.transform-count {
+  font-family: var(--mono);
+}
+
+/* ------------------------------------------------------------------ picker */
+
+.panel--picker {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+}
+
+.picker-head {
+  display: grid;
+  gap: 8px;
+  padding: 14px;
+  background: var(--bg-raise);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.search {
+  width: 100%;
+  padding: 9px 12px;
+  color: var(--text);
+  font: inherit;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  outline: none;
+}
+
+.search:focus {
+  border-color: var(--blood);
+}
+
+.search::placeholder {
+  color: var(--text-faint);
+}
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.count {
+  margin: 0;
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.item-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(46px, 1fr));
+  align-content: start;
+  gap: 3px;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.item-cell {
+  display: grid;
+  place-items: center;
+  aspect-ratio: 1;
+  padding: 4px;
+  background: var(--bg-cell);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+  transition: background 120ms ease, border-color 120ms ease;
+}
+
+.item-cell img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.item-cell:hover {
+  background: #33261e;
+  border-color: var(--blood);
+}
+
+/* Items with no modelled stat effect read dimmer, but stay pickable. */
+.item-cell:not(.has-stats) {
+  opacity: 0.52;
+}
+
+.item-cell:not(.has-stats):hover {
+  opacity: 1;
+}
+
+.no-sprite {
+  font-size: 16px;
+  color: var(--text-faint);
+}
+
+.empty,
+.empty-inv {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 18px 2px;
+  font-size: 12px;
+  color: var(--text-faint);
+}
+
+/* -------------------------------------------------------- inventory + detail */
+
+.panel--side {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: 1px;
+  background: var(--line-soft);
+}
+
+.inventory,
+.detail {
+  min-height: 0;
+  padding: 12px;
+  overflow-y: auto;
+  background: var(--bg-raise);
+}
+
+.inventory h3 {
+  margin-bottom: 8px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.muted {
+  color: var(--text-dim);
+}
+
+.inv-list {
+  display: grid;
+  gap: 2px;
+  margin: 0 0 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.inv-item {
+  display: grid;
+  grid-template-columns: 22px minmax(0, 1fr) auto auto;
+  align-items: center;
+  gap: 7px;
+  width: 100%;
+  padding: 4px 6px;
+  text-align: left;
+  background: var(--bg-cell);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+}
+
+.inv-item:hover {
+  border-color: var(--down);
+}
+
+.inv-item img {
+  width: 22px;
+  height: 22px;
+}
+
+.inv-name {
+  overflow: hidden;
+  font-size: 12px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.inv-mods {
+  font-family: var(--mono);
+  font-size: 9px;
+  color: var(--text-faint);
+  white-space: nowrap;
+}
+
+.inv-x {
+  font-size: 14px;
+  color: var(--text-faint);
+}
+
+.inv-item:hover .inv-x {
+  color: var(--down);
+}
+
+/* ----------------------------------------------------------------- tooltip */
+
+.tooltip {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.tooltip-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.tt-sprite {
+  width: 34px;
+  height: 34px;
+  flex: none;
+}
+
+.tt-name {
+  font-size: 14px;
+}
+
+.tt-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 3px;
+  font-size: 9px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.tt-kind--active {
+  color: var(--gold);
+}
+
+.tt-kind--trinket {
+  color: var(--tainted);
+}
+
+.tt-quote {
+  margin: 0;
+  font-style: italic;
+  color: var(--gold);
+}
+
+.tt-desc {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--text-dim);
+}
+
+.tt-mods {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--mono);
+  font-size: 11px;
+}
+
+.tt-nostats,
+.tt-line,
+.tt-review {
+  margin: 0;
+  font-size: 11px;
+  color: var(--text-faint);
+}
+
+.tt-review {
+  color: var(--gold);
+}
+
+.tt-label {
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.tt-details summary {
+  font-size: 10px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+  cursor: pointer;
+}
+
+.tt-details summary:hover {
+  color: var(--text-dim);
+}
+
+.tt-details ul {
+  display: grid;
+  gap: 4px;
+  margin: 6px 0 0;
+  padding-left: 16px;
+  font-size: 11px;
+  line-height: 1.45;
+  color: var(--text-dim);
+}
+
+/* -------------------------------------------------------------- responsive */
+
+@media (max-width: 1100px) {
+  .builder {
+    grid-template-columns: 200px minmax(0, 1fr) 250px;
+  }
+}
+
+@media (max-width: 860px) {
+  body {
+    overflow: auto;
+  }
+
+  .builder {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+
+  .panel {
+    overflow: visible;
+  }
+
+  .panel--side {
+    grid-template-rows: auto auto;
+  }
+}
+
+/* ------------------------------------------------- accuracy caveats */
+
+/* DPS is shown struck through when the arithmetic doesn't describe the
+   build's real output, rather than hidden -- the damage and tears values
+   feeding it are still correct and useful. */
+.stat-row.is-unreliable .stat-value {
+  color: var(--text-faint);
+  text-decoration: line-through;
+  text-decoration-color: var(--down);
+}
+
+.stat-row.is-unreliable dt::after {
+  content: " (?)";
+  color: var(--down);
+}
+
+.caveat {
+  padding: 8px 10px;
+  background: rgb(207 90 78 / 0.07);
+  border-left: 2px solid var(--down);
+}
+
+.caveat--dps {
+  background: rgb(210 162 76 / 0.07);
+  border-left-color: var(--gold);
+}
+
+.caveat h3 {
+  margin-bottom: 5px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--down);
+}
+
+.caveat--dps h3 {
+  color: var(--gold);
+}
+
+.caveat ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding-left: 14px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+
+.caveat-note {
+  margin: 6px 0 0;
+  font-size: 10px;
+  line-height: 1.4;
+  color: var(--text-faint);
+}
+
+.tt-dps {
+  margin: 0;
+  padding: 5px 7px;
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--gold);
+  background: rgb(210 162 76 / 0.08);
+  border-left: 2px solid var(--gold);
+}
+
+.tt-details--cond summary {
+  color: var(--down);
+}
+
+/* --------------------------------------------- build interactions panel */
+
+.interactions h3 {
+  margin-bottom: 6px;
+  font-size: 10px;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.interactions ul {
+  display: grid;
+  gap: 4px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.int {
+  display: grid;
+  gap: 2px;
+  padding: 6px 8px;
+  background: var(--bg-cell);
+  border-left: 2px solid var(--tainted);
+}
+
+.int--synergy {
+  border-left-color: var(--up);
+}
+
+.int-pair {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.int-arrow {
+  color: var(--text-faint);
+}
+
+.int-group {
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.int-text {
+  font-size: 11px;
+  line-height: 1.4;
+  color: var(--text-dim);
+}
+
+.tt-group {
+  font-size: 9px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.stat-hint {
+  display: block;
+  margin-top: 1px;
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-transform: none;
+  color: var(--line);
+}
+
+.tt-stack {
+  color: var(--down);
+}
+
+.inv-flag {
+  display: block;
+  font-size: 8px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--down);
+}
+
+/* ----------------------------------------------- held items + build inputs */
+
+/* Already-picked items are disabled rather than stacked: the wiki only
+   documents duplicate behaviour for three items, so quietly summing copies
+   would invent numbers. */
+.item-cell.is-held {
+  opacity: 0.22;
+  cursor: not-allowed;
+  background: var(--bg);
+  box-shadow: inset 0 0 0 1px var(--line-soft);
+}
+
+.item-cell.is-held:hover {
+  background: var(--bg);
+  border-color: transparent;
+}
+
+.tuning {
+  display: grid;
+  gap: 4px;
+}
+
+.tuning h3 {
+  margin-bottom: 4px;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-faint);
+}
+
+.tune {
+  display: grid;
+  gap: 3px;
+  padding: 6px 8px;
+  background: var(--bg-cell);
+  border-left: 2px solid var(--gold);
+}
+
+.tune-name {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.tune-select,
+.tune-num input {
+  width: 100%;
+  padding: 3px 6px;
+  color: var(--text);
+  font: inherit;
+  font-size: 11px;
+  background: var(--bg);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.tune-num {
+  display: grid;
+  grid-template-columns: 62px 1fr;
+  align-items: center;
+  gap: 6px;
+}
+
+.tune-num input {
+  width: 62px;
+}
+
+.tune-num span {
+  font-size: 10px;
+  color: var(--text-faint);
+}
